@@ -1,2 +1,3 @@
 name: Aravind Kumar, DonOfDen
 markdown: kramdown
+permalink: /blog/:year/:month/:day/:title
