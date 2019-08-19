@@ -1,29 +1,35 @@
 <!DOCTYPE html>
-	<html>
-		<head>
-			<title>{{ page.title }}</title>
-			<!-- link to main stylesheet -->
-			<link rel="stylesheet" type="text/css" href="/css/main.css">
-		</head>
-		<body>
-			<nav>
-	    		<ul>
-	        		<li><a href="/">Home</a></li>
-		        	<li><a href="/about">About</a></li>
-	        		<li><a href="/cv">CV</a></li>
-	        		<li><a href="/blog">Blog</a></li>
-	    		</ul>
-			</nav>
-			<div class="container">
-			
-			{{ content }}
-			
-			</div><!-- /.container -->
-			<footer>
-	    		<ul>
-	        		<li><a href="mailto:aravindkumar.ganesan@gmail.com">email</a></li>
-	        		<li><a href="https://github.com/donofden">github.com/donofden</a></li>
-				</ul>
-			</footer>
-		</body>
-	</html>
+<html>{% include header.html %}
+
+<body>
+	<div id="colorlib-page">
+		<div class="container-wrap">	<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+			<aside id="colorlib-aside" role="complementary" class="border js-fullheight">
+				<div class="text-center">
+					<div class="author-img" style="background-image: url(images/donofden.jpg);"></div>
+					<h1 id="colorlib-logo"><a href="index.html">Aravind Kumar G</a></h1>
+					<span class="">a.k.a. <strong>DonOfDen</strong></span>
+					<span class="position"><a href="#">Software Consultant</a> in India</span>
+				</div>{% include leftmenu.html %}
+				<div class="colorlib-footer">
+					<ul>
+						<li><a href="https://twitter.com/aravind_kumar_g" target="_blank"><i class="icon-twitter2"></i></a>
+						</li>
+						<li><a href="https://www.linkedin.com/in/aravind-kumar-g/" target="_blank"><i class="icon-linkedin2"></i></a>
+						</li>
+						<li><a href="https://www.facebook.com/aravindkumarit" target="_blank"><i class="icon-facebook2"></i></a>
+						</li>
+						<li><a href="https://stackoverflow.com/users/2090453/donofden?tab=profile" target="_blank"><i class="fa fa-stack-overflow" aria-hidden="true"></i></a>
+						</li>
+					</ul>
+				</div>
+			</aside>
+			<div id="colorlib-main">{{ content }} {% include footer.html %}</div>
+			<!-- end:colorlib-main -->
+		</div>
+		<!-- end:container-wrap -->
+	</div>
+	<!-- end:colorlib-page -->
+</body>
+
+</html>
