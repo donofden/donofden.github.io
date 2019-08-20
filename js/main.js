@@ -326,9 +326,13 @@
 $( document ).ready(function() {
 	var pageHash = window.location.hash;
 	var pathName = window.location.pathname.split('/');
+	navbar = $('#navbar');
 	if(pathName[1] != 'blog'){
 		$('html, body').animate({
 			scrollTop: $('[data-section="'+ pageHash.replace('#','') +'"]').offset().top - 55
 		}, 500);
+	} else {
+		$('#navbar ul li').removeClass('active');
+		$('a[data-nav-section="blog"]').parent().addClass('active');
 	}
 });
