@@ -2,12 +2,24 @@
 layout: default
 title: DonOfDen's Blog
 ---
+<script type="text/javascript">
+    function rootPath() {
+        var pathName = window.location.pathname.split('/');
+        var root = '';
+        for(var i=0; i < pathName.length; i++){
+            root += "../";
+        }
+        return root;
+    }
+</script>
 <div class="main-banner">
     <div class="container">
-        <img src="http://placehold.it/1200x300" class="img-responsive">
+        <script>
+            document.write('<img src="' + rootPath() + 'images/donofden-blog.jpg" class="img-responsive" style="max-width: 75%;">' );
+        </script>
     </div>
 </div>
-
+<hr>
 <div class="posts span8">
     <h1>{{ page.title }}</h1>
     {% for post in site.posts %}
