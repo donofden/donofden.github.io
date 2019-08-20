@@ -146,11 +146,22 @@
 	var clickMenu = function() {
 
 		$('#navbar a:not([class="external"])').click(function(event){
-			
+			var pathName = window.location.pathname.split('/');
+			var root = '';
 			var section = $(this).data('nav-section'),
 				navbar = $('#navbar');
-				var sectionValue = $('[data-section="' + section + '"]').value();
-				console.log(sectionValue);
+				if(section == 'blog'){
+					return true;
+				}
+
+				if((pathName[1] == 'blog') && (section != 'blog')){
+					var root = '';
+					for(var i=0; i < pathName.length; i++){
+						root += "../";
+					}
+					window.location.href = root+'index.html#' + section;
+				}
+
 				if ( $('[data-section="' + section + '"]').length ) {
 			    	$('html, body').animate({
 			        	scrollTop: $('[data-section="' + section + '"]').offset().top - 55
@@ -310,3 +321,14 @@
 
 
 }());
+
+// Menu issue Fix - Dont touch it pls. I know it was you who fixed it. But u cant do it again.
+$( document ).ready(function() {
+	var pageHash = window.location.hash;
+	var pathName = window.location.pathname.split('/');
+	if(pathName[1] != 'blog'){
+		$('html, body').animate({
+			scrollTop: $('[data-section="'+ pageHash.replace('#','') +'"]').offset().top - 55
+		}, 500);
+	}
+});
