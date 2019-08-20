@@ -1,9 +1,23 @@
 ---
 layout: default
 ---
-<h1>{{ page.title }}</h1>
-<p class="meta">{{ page.date | date_to_string }}</p>
+<hr>
 
-<div class="post">
-  {{ content }}
+<div class="posts span8">
+    <h1><a href="">{{ page.title }}</a></h1>
+    <p class="lead"><i class="fa fa-user"></i> by <a href="">{{ page.author }}</a>
+    </p>
+    <hr>
+    <p><i class="fa fa-calendar"></i> Posted on {{ page.date | date_to_string }}</p>
+    <p><i class="fa fa-tags"></i> Tags: 
+      {% for tag in page.tags %}
+      <a href="#{{ tag | slugify }}">
+        <span class="badge badge-info">{{ tag }}</span>
+      </a>
+      {% endfor %}
+    </p>
+
+    <hr>
+    <p class="lead">{{ content }}</p>
+    
 </div>

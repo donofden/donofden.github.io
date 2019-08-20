@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html>{% include header.html %}
-
+<script type="text/javascript">
+function rootPath() {
+	var pathName = window.location.pathname.split('/');
+	var root = '';
+	for(var i=0; i < pathName.length; i++){
+		root += "../";
+	}
+	return root;
+}
+</script>
 <body>
 	<div id="colorlib-page">
 		<div class="container-wrap">	<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
 			<aside id="colorlib-aside" role="complementary" class="border js-fullheight">
 				<div class="text-center">
-					<div class="author-img" style="background-image: url(images/donofden.jpg);"></div>
+					<script>
+						document.write('<div class="author-img" style="background-image: url(' + rootPath() + 'images/donofden.jpg);"></div>' );
+					</script>
 					<h1 id="colorlib-logo"><a href="index.html">Aravind Kumar G</a></h1>
 					<span class="">a.k.a. <strong>DonOfDen</strong></span>
 					<span class="position"><a href="#">Software Consultant</a> in India</span>

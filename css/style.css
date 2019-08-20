@@ -1715,3 +1715,15 @@ body.offcanvas .colorlib-nav-toggle {
 .js .animate-box {
 	opacity: 0;
 }
+
+.blog-label {
+  background: grey;
+    color: white;
+}
+.posts {
+  margin-left: 20px;
+}
+
+.post {
+  margin-left: 20px;
+}

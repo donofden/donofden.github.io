@@ -146,9 +146,11 @@
 	var clickMenu = function() {
 
 		$('#navbar a:not([class="external"])').click(function(event){
+			
 			var section = $(this).data('nav-section'),
 				navbar = $('#navbar');
-
+				var sectionValue = $('[data-section="' + section + '"]').value();
+				console.log(sectionValue);
 				if ( $('[data-section="' + section + '"]').length ) {
 			    	$('html, body').animate({
 			        	scrollTop: $('[data-section="' + section + '"]').offset().top - 55
@@ -254,7 +256,7 @@
 				$("#sticky_item").trigger("sticky_kit:detach");
 				$("#sticky_item").trigger("sticky_kit:unstick");
 
-				$("#sticky_item").stick_in_parent();
+				//$("#sticky_item").stick_in_parent();
 			}
 			
 

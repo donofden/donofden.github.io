@@ -2,10 +2,29 @@
 layout: default
 title: DonOfDen's Blog
 ---
-<h1>{{ page.title }}</h1>
-<ul class="posts">
+<div class="main-banner">
+    <div class="container">
+        <img src="http://placehold.it/1200x300" class="img-responsive">
+    </div>
+</div>
 
-  {% for post in site.posts %}
-    <li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
-  {% endfor %}
-</ul>
+<div class="posts span8">
+    <h1>{{ page.title }}</h1>
+    {% for post in site.posts %}
+        <h1><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h1>
+        
+    <p>{{ post.description }}</p>
+    <div>
+        <p>Author: <strong>{{ post.author }}</strong></p>
+        <span class="badge badge-success">Posted {{ post.date | date_to_string }}</span>
+        <div class="pull-right">
+          {% for tag in post.tags %}
+            <a href="#{{ tag | slugify }}">
+                <span class="label blog-label">{{ tag }}</span>
+            </a>
+          {% endfor %}
+        </div>
+    </div> 
+    <hr>
+    {% endfor %}
+</div>
