@@ -1,3 +1,28 @@
 name: Aravind Kumar, DonOfDen
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
+style: light
+
+colors:
+  Python: "#3572A5"
+  Go: "#00ADD8"
+  Makefile: "#427819"
+  HTML: "#e34c26"
+  CSS: "#563d7c"
+  JavaScript: "#f1e05a"
+  Shell: "#89e051"
+
+projects:
+  sort_by: pushed
+  # sort_by options:
+  #   - pushed
+  #   - stars
+  exclude:
+    archived: false
+    forks: true
+    projects:
+    # - repo-name
+plugins:
+  - jekyll-octicons
+  - jekyll-github-metadata
+  - jemoji
