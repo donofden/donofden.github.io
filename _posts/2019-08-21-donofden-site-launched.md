@@ -6,7 +6,7 @@ author: DonOfDen
 tags: [Scrum Master, Jenkins, Jira, ADO, Slack, Blog]
 description: In the automation world, how a ScrumMaster can do better by automating his daily work and reduce workload to focus more.
 ---
-![blog-head-image](/images/doc/jira-and-slack.PNG)
+![blog-head-image](/images/doc/jira-and-slack.png)
 
 Oops.., So this is my first blog, Hope I continue writing more in future on the tech I working on. Moreover, this blog is a reference for my work because usually, I forget what I did in the past ( hahaha).
 
