@@ -1747,3 +1747,9 @@ width: 18px;
 height: auto;
 vertical-align: middle;
 }
+
+img[alt=blog-head-image] { width:100%; }
+
+.posts ul {
+  margin-left: 30px;
+}
