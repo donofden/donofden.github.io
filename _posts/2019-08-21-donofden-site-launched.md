@@ -8,13 +8,13 @@ description: In the automation world, how a ScrumMaster can do better by automat
 ---
 ![blog-head-image](/images/doc/slack-and-jira.png)
 
-Oops.., So this is my first blog, Hope I continue writing more in future on the tech I working on. Moreover, this blog is a reference for my work because usually, I forget what I did in the past ( hahaha).
+Oops.., So this is my first blog, Hope I will continue writing more in future on the tech I working on. Moreover, this blog is a reference for my work because usually, I forget what I did in the past ( hahaha).
 
-Ok, let's start. You probably saw many blogs on Jira, Scrum Master, and Slack. But this post is to explain how I integrated Jira with Slack to reduce my daily workload. As a scrum master, I wanted to know the sprint burndown on regular basis and I believe all team members are professionals, we don't go and ask for this work on a daily basis instead we can share where we are heading to in terms of a team effort on a sprint. this will understand their role and important works. So in order to do it, I planned to calculate the Burndown of the team and post to our slack channel. This is getting a wider audience on where we are up to in the sprint.
+Ok, let's start. You probably saw many blogs on Jira, Scrum Master, and Slack. But this post is to explain how I integrated Jira with Slack to reduce my daily workload. As a scrum master, I wanted to know the sprint burndown on regular basis and I believe all team members are professionals, we don't go and ask for his/her work on a daily basis instead we can share where we are heading to in terms of a team on a sprint. So in order to do it, I have planned to calculate the Burndown of the team and post to our slack channel. This is to get a wider audience on where we are up to in the sprint.
 
 As a Scrum Master/Developer its not always easy to do multiple things in one day, so I decided to write a script which fetches details from our JIRA board and calculates the team's velocity (from the story points), then posts the values into our SLACK Channel.
 
-so I now no longer need to run or calculate the Burndown chart myself. Instead, I create a pipeline job in Jenkins that is triggered every day at 1 AM, secondly, a Python Script is run to fetch the details from JIRA and calculate. The result is a Burndown calculation in Slack.
+So I now no longer need to run or calculate the Burndown chart myself. Instead, I create a pipeline job in Jenkins that is triggered every day at 1 AM, secondly, a Python Script is run to fetch the details from JIRA and calculate. The result is a Burndown calculation in Slack.
 
 ![Full screen](/images/doc/slack-post.jpg)
 
