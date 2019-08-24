@@ -1,3 +1,11 @@
+---
+layout: post
+title: "How to get Google app Client ID and Client Secret"
+date: 2019-08-24
+author: DonOfDen
+tags: [Google API, API, CLIENT ID, Client Secret, Gmail]
+description: To work with Google APIs, you will need Google API Console project and Client Id. Which you can use to call different Google APIs. We wanted to integrate Google Sign-In into my CLI Application.
+---
 ## Turn on the Gmail API
 
 To work with Google APIs, you will need Google API Console project and Client Id. Which you can use to call different Google APIs. We wanted to integrate Google Sign-In into my CLI Application.
@@ -43,3 +51,5 @@ To work with Google APIs, you will need Google API Console project and Client Id
 It will display the popup with client id and client secret.
 
 ![Full screen](/images/doc/step-11.png)
+
+Share your thoughts via twitter @aravind_kumar_g ``¯\_(ツ)_/¯``
