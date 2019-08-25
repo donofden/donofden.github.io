@@ -18,7 +18,10 @@ function rootPath() {
 					<script>
 						document.write('<div class="author-img" style="background-image: url(' + rootPath() + 'images/donofden.jpg);"></div>' );
 					</script>
-					<h1 id="colorlib-logo"><a href="index.html">Aravind Kumar G</a></h1>
+					<h1 id="colorlib-logo">
+						<script>
+							document.write('<a href="' + rootPath() + '/index.html">Aravind Kumar G</a></h1>' );
+						</script>
 					<span class="">a.k.a. <strong>DonOfDen</strong></span>
 					<span class="position"><a href="#">Software Consultant</a> in India</span>
 				</div>{% include leftmenu.html %}
