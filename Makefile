@@ -20,4 +20,9 @@ start: ## Start the application - http://localhost:4000/
 
 .PHONY: install
 install: ## instell plugins from Gemfile
-	bundle install
+	sudo gem install jekyll bundler
+	sudo bundle install
+
+.PHONY: build-live
+build-live: ## build live website
+	./RebuildPage.sh
