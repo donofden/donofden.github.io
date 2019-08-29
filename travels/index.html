@@ -1,0 +1,24 @@
+---
+layout: default
+title: DonOfDen's Travel Logs
+---
+<script type="text/javascript">
+    function rootPath() {
+        var pathName = window.location.pathname.split('/');
+        var root = '';
+        for(var i=0; i < pathName.length; i++){
+            root += "../";
+        }
+        return root;
+    }
+</script>
+<hr>
+<div class="posts span8">
+
+    <div id="map"></div>
+
+
+
+</div>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-OJKSYugT0LswBjQv-vGVK1xk6CudO2s"></script>
+<script src="map.js"></script>

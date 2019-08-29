@@ -135,11 +135,12 @@
             var root = '';
             var section = $(this).data('nav-section'),
                 navbar = $('#navbar');
-            if (section == 'blog') {
+            if ((section == 'blog')||(section == 'travels')) {
                 return true;
             }
 
-            if ((pathName[1] == 'blog') && (section != 'blog')) {
+
+            if (((pathName[1] == 'blog') && (section != 'blog'))||((pathName[1] == 'travels') && (section != 'travels'))) {
                 var root = '';
                 for (var i = 0; i < pathName.length; i++) {
                     root += "../";
@@ -288,12 +289,16 @@ $(document).ready(function() {
     var pageHash = window.location.hash;
     var pathName = window.location.pathname.split('/');
     navbar = $('#navbar');
-    if (pathName[1] != 'blog') {
+    if (pathName[1] == 'blog') {
+        $('#navbar ul li').removeClass('active');
+        $('a[data-nav-section="blog"]').parent().addClass('active');
+    } else if (pathName[1] == 'travels'){
+        $('#navbar ul li').removeClass('active');
+        $('a[data-nav-section="travels"]').parent().addClass('active');
+    } else if (pathName[1] != 'blog') {
         $('html, body').animate({
             scrollTop: $('[data-section="' + pageHash.replace('#', '') + '"]').offset().top - 55
         }, 500);
-    } else {
-        $('#navbar ul li').removeClass('active');
-        $('a[data-nav-section="blog"]').parent().addClass('active');
     }
+    
 });
