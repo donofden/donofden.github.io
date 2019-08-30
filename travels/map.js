@@ -1,5 +1,5 @@
 function initMap() {
-    var zoomSize = 10;
+    var zoomSize = 5;
     var location = new google.maps.LatLng(53.3811, -1.4701);
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: zoomSize,
@@ -11,11 +11,11 @@ function initMap() {
 
     // Marker Icon
     var image = {
-        url: './marker.png',
-        size: new google.maps.Size(zoomSize * 2, zoomSize * 2),
+        url: './marker/icon_32X32.png',
+        //size: new google.maps.Size(zoomSize * 2, zoomSize * 2),
         origin: null,
         anchor: null,
-        scaledSize: new google.maps.Size(zoomSize * 2, zoomSize * 2)
+        //scaledSize: new google.maps.Size(zoomSize * 2, zoomSize * 2)
     };
     // Set Marker
     var marker = new google.maps.Marker({
@@ -125,16 +125,43 @@ function initMap() {
     //when the map zoom changes, resize the icon based on the zoom level so the marker covers the same geographic area
     google.maps.event.addListener(map, 'zoom_changed', function() {
         var zoom = map.getZoom();
-        var relativePixelSize = zoom * 4;
+        var icons = [
+            "icon_16X16.png",   // Zoom - 0
+            "icon_20X20.png",   // Zoom - 1
+            "icon_20X20.png",   // Zoom - 2
+            "icon_24X24.png",   // Zoom - 3
+            "icon_24X24.png",   // Zoom - 4
+            "icon_32X32.png",   // Zoom - 5
+            "icon_32X32.png",   // Zoom - 6
+            "icon_32X32.png",   // Zoom - 7
+            "icon_32X32.png",   // Zoom - 8
+            "icon_32X32.png",   // Zoom - 9
+            "icon_48X48.png",   // Zoom - 10
+            "icon_48X48.png",   // Zoom - 11
+            "icon_48X48.png",   // Zoom - 12
+            "icon_48X48.png",   // Zoom - 13
+            "icon_48X48.png",   // Zoom - 14
+            "icon_64X64.png",   // Zoom - 15
+            "icon_64X64.png",   // Zoom - 16
+            "icon_64X64.png",   // Zoom - 17
+            "icon_64X64.png",   // Zoom - 18
+            "icon_64X64.png",   // Zoom - 19
+            "icon_128X128.png", // Zoom - 20
+            "icon_128X128.png", // Zoom - 21
+            "icon_128X128.png"  // Zoom - 22
+        ];
+        imageIconPath ="./marker/"+icons[zoom];
+
         var image = {
-            url: marker.getIcon().url,
+            //url: marker.getIcon().url,
+            url: imageIconPath,
             // This marker is 20 pixels wide by 32 pixels high.
             size: null,
             // The origin for this image is (0, 0).
             origin: null,
             // The anchor for this image is the base of the flagpole at (0, 32).
             anchor: null,
-            scaledSize: new google.maps.Size(relativePixelSize, relativePixelSize) //changes the scale
+            //scaledSize: new google.maps.Size(relativePixelSize, relativePixelSize) //changes the scale
         };
         marker.setIcon(image);
     });
