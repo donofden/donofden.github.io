@@ -1,6 +1,5 @@
 function initMap() {
     var zoomSize = 5;
-    var location = new google.maps.LatLng(53.3811, -1.4701);
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: zoomSize,
         center: {
@@ -8,38 +7,7 @@ function initMap() {
             lng: -1.4701
         }
     });
-
-    // Marker Icon
-    var image = {
-        url: './marker/icon_32X32.png',
-        //size: new google.maps.Size(zoomSize * 2, zoomSize * 2),
-        origin: null,
-        anchor: null,
-        //scaledSize: new google.maps.Size(zoomSize * 2, zoomSize * 2)
-    };
-    // Set Marker
-    var marker = new google.maps.Marker({
-        position: location,
-        map: map,
-        icon: image,
-    });
-
-    // Information on the Marker Click
-    var contentString = '<div class="info-window">' +
-        '<h3>Info Window Content</h3>' +
-        '<div class="info-content">' +
-        '<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>' +
-        '</div>' +
-        '</div>';
-
-    var infowindow = new google.maps.InfoWindow({
-        content: contentString,
-        maxWidth: 400
-    });
-
-    marker.addListener('click', function() {
-        infowindow.open(map, marker);
-    });
+    setMarker(map);
 
     // Map Style
     var styles = [{
@@ -168,3 +136,38 @@ function initMap() {
 }
 
 google.maps.event.addDomListener(window, 'load', initMap);
+
+function setMarker(map){
+    var location = new google.maps.LatLng(53.3811, -1.4701);
+    // Marker Icon
+    var image = {
+        url: './marker/icon_32X32.png',
+        //size: new google.maps.Size(zoomSize * 2, zoomSize * 2),
+        origin: null,
+        anchor: null,
+        //scaledSize: new google.maps.Size(zoomSize * 2, zoomSize * 2)
+    };
+    // Set Marker
+    var marker = new google.maps.Marker({
+        position: location,
+        map: map,
+        icon: image,
+    });
+
+    // Information on the Marker Click
+    var contentString = '<div class="info-window">' +
+        '<h3>Info Window Content</h3>' +
+        '<div class="info-content">' +
+        '<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>' +
+        '</div>' +
+        '</div>';
+
+    var infowindow = new google.maps.InfoWindow({
+        content: contentString,
+        maxWidth: 400
+    });
+
+    marker.addListener('click', function() {
+        infowindow.open(map, marker);
+    });
+}
