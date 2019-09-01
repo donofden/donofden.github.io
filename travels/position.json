@@ -1,0 +1,22 @@
+{
+	"markers": [
+        {
+            "title": "Bondi Beach",
+            "lat": -33.890542,
+            "lng": 151.274856,
+            "description": "Description"
+		},
+		{
+			"title": "Shangri-La Hotel",
+            "lat": 25.1212,
+            "lng": 54.1535,
+            "description": "Description"
+		},
+		{
+			"title": "Grand Hyatt",
+            "lat": 25.1212,
+            "lng": 55.1535,
+            "description": "Description"
+		}
+	]
+}
