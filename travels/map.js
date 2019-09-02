@@ -5,6 +5,11 @@ function initMap() {
         center: {
             lat: 38.9637, // Turkey
             lng: 35.2433  // Turkey
+        },
+        mapTypeControl: true,
+        mapTypeControlOptions: {
+            style: google.maps.MapTypeControlStyle.DROPDOWN_MENU,
+            mapTypeIds: ['roadmap', 'satellite', 'hybrid', 'terrain']
         }
     });
     setMarker(map);
@@ -127,6 +132,16 @@ function setMarker(map) {
                     title: location['title']
                     //zIndex: beach[3]
                 });
+                // Add Metadata to markers
+                marker.metadata = {type: "point", id: location['id']};
+
+                // List the Markers
+                $('#results-list').append(
+                    $('<li />')
+                    .attr('id','map-marker-' + i)
+                    .attr('class','depot-result')
+                    .html(location['title'])
+                );
 
                 // Information on the Marker Click
                 var contentString = '<div class="info-window">' +
