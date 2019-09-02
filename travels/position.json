@@ -1,21 +1,157 @@
 {
 	"markers": [
         {
-            "title": "Bondi Beach",
-            "lat": -33.890542,
-            "lng": 151.274856,
+            "title": "Chennai",
+            "lat": 13.0827,
+            "lng": 80.2707,
+            "city": "Chennai, Tamil Nadu, India.",
+            "description": "Chennai City, The place where I live."
+		},
+		{
+			"title": "Ranipet Sipcot",
+            "lat": 12.9692,
+            "lng": 79.2991,
+            "city": "Ranipet Sipcot, Tamil Nadu, India.",
+            "description": "I Born Here!!"
+		},
+		{
+			"title": "Sheffield",
+            "lat": 53.3811,
+            "lng": -1.4701,
+            "city": "City in England",
             "description": "Description"
 		},
 		{
-			"title": "Shangri-La Hotel",
-            "lat": 25.1212,
-            "lng": 54.1535,
+			"title": "Leeds",
+            "lat": 53.8008,
+            "lng": -1.5491,
+            "city": "City in England",
             "description": "Description"
 		},
 		{
-			"title": "Grand Hyatt",
-            "lat": 25.1212,
-            "lng": 55.1535,
+			"title": "London",
+            "lat": 51.5074,
+            "lng": -0.1278,
+            "city": "City in England",
+            "description": "Description"
+        },
+		{
+			"title": "Doncaster",
+            "lat": 53.5228,
+            "lng": -1.1285,
+            "city": "Town in England",
+            "description": "Description"
+		},
+		{
+			"title": "Manchester",
+            "lat": 53.4808,
+            "lng": -2.2426,
+            "city": "City in England",
+            "description": "Description"
+		},
+		{
+			"title": "Watford",
+            "lat": 51.6565,
+            "lng": -0.3903,
+            "city": "Town in England",
+            "description": "Description"
+		},
+		{
+			"title": "Rotherham",
+            "lat": 53.4326,
+            "lng": -1.3635,
+            "city": "Town in England",
+            "description": "Description"
+		},
+		{
+			"title": "Dublin",
+            "lat": 53.3498,
+            "lng": -6.2603,
+            "city": "Capital of the Republic of Ireland",
+            "description": "Description"
+		},
+		{
+			"title": "Belfast",
+            "lat": 54.5973,
+            "lng": -5.9301,
+            "city": "Capital of Northern Ireland",
+            "description": "Description"
+		},
+		{
+			"title": "Glasgow",
+            "lat": 55.8642,
+            "lng": -4.2518,
+            "city": "City in Scotland",
+            "description": "Description"
+		},
+		{
+			"title": "Edinburgh",
+            "lat": 55.9533,
+            "lng": -3.1883,
+            "city": "Capital of Scotland",
+            "description": "Description"
+		},
+		{
+			"title": "Mysuru",
+            "lat": 12.2958,
+            "lng": 76.6394,
+            "city": "City in Karnataka, India.",
+            "description": "Description"
+		},
+		{
+			"title": "Kochi",
+            "lat": 9.9312,
+            "lng": 76.2673,
+            "city": "City in Kerala, India.",
+            "description": "Description"
+		},
+		{
+			"title": "Srinagar",
+            "lat": 34.0837,
+            "lng": 74.7973,
+            "city": "City in Jammu and Kashmir, India.",
+            "description": "Description"
+		},
+		{
+			"title": "Jammu",
+            "lat": 32.73,
+            "lng": 74.87,
+            "city": "City in Jammu and Kashmir, India.",
+            "description": "Description"
+		},
+		{
+			"title": "Gulmarg",
+            "lat": 34.0484,
+            "lng": 74.3805,
+            "city": "Town in Jammu and Kashmir, India.",
+            "description": "Description"
+		},
+		{
+			"title": "Pahalgam",
+            "lat": 34.0161,
+            "lng": 75.3150,
+            "city": "Town in Jammu and Kashmir, India.",
+            "description": "Description"
+		},
+		{
+			"title": "Sonamarg",
+            "lat": 34.3032,
+            "lng": 75.2931,
+            "city": "Town in Jammu and Kashmir, India.",
+            "description": "Description"
+		},
+		{
+			"title": "New Delhi",
+            "lat": 28.6139,
+            "lng": 77.2090,
+            "city": "Capital of India, India.",
+            "description": "Description"
+		},
+		{
+			"title": "Abu Dhabi International Airport",
+            "lat": 24.4419,
+            "lng": 54.6501,
+            "city": "Airport in Abu Dhabi, United Arab Emirates.",
             "description": "Description"
 		}
 	]
