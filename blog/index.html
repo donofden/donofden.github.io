@@ -22,6 +22,34 @@ title: DonOfDen's Blog
 <hr>
 <div class="posts span8">
     <h1>{{ page.title }}</h1>
+    <table id="blogtable" class="stripe" style="width:100%">
+            <thead>
+                <tr>
+                    <th>Blog Title</th>
+                    <th>Short Description</th>
+                    <th>Date Posted</th>
+                    <th>Tags</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for post in site.posts %}
+                <tr>
+                    <td><a href="{{ post.url }}" title="{{ post.title }}" target="_blank">{{ post.title }}</a></td>
+                    <td>{{ post.description }}</td>
+                    <td>{{ post.date | date_to_string }}</td>
+                    <td>{% for tag in post.tags %}{{ tag }} {% endfor %}</td>
+                </tr>
+            {% endfor %}
+                </tbody>
+            <tfoot>
+                <tr>
+                    <th>Blog Title</th>
+                    <th>Short Description</th>
+                    <th>Date Posted</th>
+                    <th>Tags</th>
+                </tr>
+            </tfoot>
+        </table>
     {% for post in site.posts %}
         <h1><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h1>
         

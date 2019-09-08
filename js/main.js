@@ -302,3 +302,23 @@ $(document).ready(function() {
     }
     
 });
+
+$(document).ready(function() {
+    $('#blogtable').DataTable( {
+        "oLanguage": {
+            "sSearch": "Filter Blog:"
+        },
+        "columnDefs": [
+            {
+                "targets": [ 1 ],
+                "visible": false,
+            },
+            {
+                "targets": [ 3 ],
+                "visible": false
+            }
+        ],
+        "iDisplayLength": 25,
+    "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
+    } );
+} );
