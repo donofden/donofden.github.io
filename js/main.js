@@ -306,7 +306,8 @@ $(document).ready(function() {
 $(document).ready(function() {
     $('#blogtable').DataTable( {
         "oLanguage": {
-            "sSearch": "Filter Blog:"
+            "sSearch": "Filter Blog:",
+            "sZeroRecords": " No matching blog found :( ",
         },
         "columnDefs": [
             {
@@ -321,4 +322,8 @@ $(document).ready(function() {
         "iDisplayLength": 25,
     "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
     } );
+
+    $('#show-hidden-search').click(function() {
+        $('.hidden-search').slideToggle("fast");
+      });
 } );

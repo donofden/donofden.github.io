@@ -21,8 +21,17 @@ title: DonOfDen's Blog
 </div>
 <hr>
 <div class="posts span8">
-    <h1>{{ page.title }}</h1>
-    <table id="blogtable" class="stripe" style="width:100%">
+    <div class="outerDiv">
+        <div class="leftDiv"><h1>{{ page.title }}</h1></div>
+        <div id="show-hidden-search" class="rightDiv">
+            <button class="btn">
+                <i class="fa fa-search"></i>
+                Search Blogs!
+            </button>
+        </div>
+    </div>
+    <div class="hidden-search" style="display: none;">
+        <table id="blogtable" class="stripe" style="width:100%">
             <thead>
                 <tr>
                     <th>Blog Title</th>
@@ -50,8 +59,12 @@ title: DonOfDen's Blog
                 </tr>
             </tfoot>
         </table>
+        <hr>
+    </div>
+    <br>
+    <div class="blog-list">
     {% for post in site.posts %}
-        <h1><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h1>
+    <h1><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h1>
         
     <p>{{ post.description }}</p>
     <div>
@@ -67,4 +80,5 @@ title: DonOfDen's Blog
     </div> 
     <hr>
     {% endfor %}
+    </div>
 </div>

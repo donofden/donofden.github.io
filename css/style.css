@@ -1981,3 +1981,19 @@ img[alt=blog-head-image] { width:100%; }
 .dataTables_wrapper{
 	margin-left: 20px;
 }
+.outerDiv{
+	margin: 0px auto;
+	position: relative;
+}
+.leftDiv{
+	float: left;
+	width: 75%
+}
+.rightDiv{
+	float: right;
+	width: 25%
+}
+
+.blog-list{
+    margin-top: 45px;
+}
