@@ -1,13 +1,91 @@
 ---
 layout: post
-title: "Map vs Slice vs Array"
-date: 2019-09-20
+title: "Array vs Slice vs Map"
+date: 2019-09-11
 author: DonOfDen
 tags: [go, golang, map, array, slice, range]
 description: An Intro to Go Map
 ---
 
-# Map vs Slice vs Array
+# Array vs Slice vs Map
+
+## Array
+
+![blog-head-image](/images/doc/golang-array-1.png)
+
+- Arrays hold collections of values that all share the same type.
+- Index start with `0`
+
+Array Type Example:
+
+```Go
+// Aray of String
+var myStringArray [2]string
+myStringArray[0] = "Hey, "
+myStringArray[1] = "You!"
+
+// Integer Array
+var myIntegerArray [2]int
+myIntegerArray[0] = 1
+myIntegerArray[1] = 2
+
+// Time Array
+var dates [1]time.Time
+// Assign values
+dates[0] = time.Unix(1257894000,0)
+```
+
+### Zero values in arrays
+
+![blog-head-image](/images/doc/golang-array-2.png)
+![blog-head-image](/images/doc/golang-array-3.png)
+
+_Fun Stuff_
+
+```Go
+var counters [3]int
+counters[0]++
+```
+## Array literals
+
+If you know in advance what values an array should hold, you can initialize the array with those values using an array literal.
+
+![blog-head-image](/images/doc/golang-array-4.png)
+
+```Go
+package main
+
+import "fmt"
+
+func main() {
+	intArray := [...]int{10, 20, 30, 40, 50}
+
+	fmt.Println("\n---------------Example 1--------------------\n")
+	for i := 0; i < len(intArray); i++ {
+		fmt.Println(intArray[i])
+	}
+
+	fmt.Println("\n---------------Example 2--------------------\n")
+	for index, element := range intArray {
+		fmt.Println(index, "=>", element)
+
+	}
+
+	fmt.Println("\n---------------Example 3--------------------\n")
+	for _, value := range intArray {
+		fmt.Println(value)
+	}
+
+	j := 0
+	fmt.Println("\n---------------Example 4--------------------\n")
+	for range intArray {
+		fmt.Println(intArray[j])
+		j++
+	}
+}
+```
+
+[Try in Go Playground](https://play.golang.org/p/Yurk4wvvfmy){:target="_blank"}
 
 ## MAPs
 ![blog-head-image](/images/doc/golang-map-1.png)
