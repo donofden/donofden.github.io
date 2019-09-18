@@ -109,3 +109,119 @@ func main() {
 ## Array & Slice
 
 ![blog-head-image](/images/doc/golang-array-slice.png)
+
+## Difference between map and slice in terms of performance.
+
+<details>
+  <summary>Click to expand!</summary>
+
+## Difference between map[int]bool and []bool in terms of performance.
+
+```Go
+
+package main
+
+import (
+	"fmt"
+	"time"
+)
+
+// Difference between map[int]bool, and []bool in terms of performance.
+func main() {
+	// function that sums up the proper divisors of a number:
+	mapFun()
+	sliceFun()
+}
+
+func divisorsSum(n int) int {
+	sum := 1
+	for i := 2; i*i <= n; i++ {
+		if n%i == 0 {
+			sum += i
+			if n/i != i {
+				sum += n / i
+			}
+		}
+	}
+	return sum
+}
+
+func mapFun() {
+	// Map
+	start := time.Now()
+	defer func() {
+		elapsed := time.Since(start)
+		fmt.Printf(" Map - Time: %s\n", elapsed)
+	}()
+
+	n := 28123
+	abundant := []int{}
+	for i := 12; i <= n; i++ {
+		if divisorsSum(i) > i {
+			abundant = append(abundant, i)
+		}
+	}
+
+	sums := map[int]bool{}
+	for i := 0; i < len(abundant); i++ {
+		for j := i; j < len(abundant); j++ {
+			if abundant[i]+abundant[j] > n {
+				break
+			}
+			sums[abundant[i]+abundant[j]] = true
+		}
+	}
+
+	sum := 0
+	for i := 1; i <= 28123; i++ {
+		if _, ok := sums[i]; !ok {
+			sum += i
+		}
+	}
+	fmt.Println(sum)
+}
+
+func sliceFun() {
+	// slice
+	startSlice := time.Now()
+	defer func() {
+		elapsed := time.Since(startSlice)
+		fmt.Printf(" Slice - Time: %s\n", elapsed)
+	}()
+
+	nSlice := 28123
+	abundantSlice := []int{}
+	for i := 12; i <= nSlice; i++ {
+		if divisorsSum(i) > i {
+			abundantSlice = append(abundantSlice, i)
+		}
+	}
+	sumsSlice := make([]bool, nSlice)
+	for i := 0; i < len(abundantSlice); i++ {
+		for j := i; j < len(abundantSlice); j++ {
+			if abundantSlice[i]+abundantSlice[j] < nSlice {
+				sumsSlice[abundantSlice[i]+abundantSlice[j]] = true
+			} else {
+				break
+			}
+		}
+	}
+	sumSlice := 0
+	for i := 0; i < len(sumsSlice); i++ {
+		if !sumsSlice[i] {
+			sumSlice += i
+		}
+	}
+	fmt.Println(sumSlice)
+}
+
+```
+The above code will output something sililar tot he following:
+
+```
+4179871
+ Map - Time: 360.206747ms
+4179871
+ Slice - Time: 43.404627ms
+```
+</details>
