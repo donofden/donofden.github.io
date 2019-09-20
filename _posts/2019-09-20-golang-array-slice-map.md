@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "Array vs Slice vs Map"
-date: 2019-09-11
+date: 2019-09-20
 author: DonOfDen
-tags: [go, golang, map, array, slice, range]
+tags: [go, golang, map, array, slice, range, map]
 description: An Intro to Go Map
 ---
 
