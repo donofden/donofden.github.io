@@ -112,22 +112,25 @@ import "fmt"
 
 func main() {
 	s := []int{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
-
+	
+	fmt.Println("s", s)
 	fmt.Println("s[:]", s[:])
 	fmt.Println("s[2:]", s[2:])
 	fmt.Println("s[:4]", s[:4])
 	fmt.Println("s[2:4]", s[2:4])
 }
 ```
-
-[Try in Go Playground](https://play.golang.org/p/1naC_0qQz_E){:target="_blank"}
-[Try in Go Playground](https://play.golang.org/p/qKtVAka498Z){:target="_blank"}
+[Try in Go Playground](https://play.golang.org/p/KlgFws4r_vb){:target="_blank"}
 
 ### The slice operator
 
 - Every slice is built on top of an underlying array. It’s the underlying array that actually holds the slice’s data; the slice is merely a view into some (or all) of the array’s elements.
 
 - Change the underlying array, change the slice
+
+[Try in Go Playground](https://play.golang.org/p/1naC_0qQz_E){:target="_blank"}
+
+[Try in Go Playground](https://play.golang.org/p/qKtVAka498Z){:target="_blank"}
 
 ## MAPs
 ![blog-head-image](/images/doc/golang-map-1.png)
