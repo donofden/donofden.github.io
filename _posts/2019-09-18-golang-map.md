@@ -100,6 +100,9 @@ func main() {
 ## Slice Literal
 
 - Just like with arrays, if you know in advance what values a slice will start with, you can initialize the slice with those values using a slice literal
+
+![blog-head-image](/images/doc/golang-slice-2.png)
+
 - `[start:end]` extract operator
 
 ```Go
@@ -116,8 +119,6 @@ func main() {
 	fmt.Println("s[2:4]", s[2:4])
 }
 ```
-
-![blog-head-image](/images/doc/golang-slice-2.png)
 
 [Try in Go Playground](https://play.golang.org/p/1naC_0qQz_E){:target="_blank"}
 [Try in Go Playground](https://play.golang.org/p/qKtVAka498Z){:target="_blank"}
