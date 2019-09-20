@@ -281,7 +281,7 @@ func main() {
 	fmt.Println("Value stored in pointer variable pointer = ", pointer)
 	*pointer = 500
 
-	fmt.Println("Value stored in y(*p) after Changing = ", y)
+	fmt.Println("Value stored in y(*pointer) after Changing = ", y)
 
 }
 ```
