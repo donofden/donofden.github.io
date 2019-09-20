@@ -87,6 +87,47 @@ func main() {
 
 [Try in Go Playground](https://play.golang.org/p/Yurk4wvvfmy){:target="_blank"}
 
+[So far OK! Lets Answer this!](https://play.golang.org/p/zf-yLTZbDYp){:target="_blank"}
+
+## Slice
+
+![blog-head-image](/images/doc/golang-slice-1.png)
+
+- A slice is like an array which is a container to hold elements of the same data type but slice can vary in size.
+- slice is a **composite data type** and because it is composed of primitive data type.
+- slice is a reference to an array. (slice when needed to store more data, creates a new array of appropriate length behind the scene to accommodate more data.)
+
+## Slice Literal
+
+- Just like with arrays, if you know in advance what values a slice will start with, you can initialize the slice with those values using a slice literal
+- `[start:end]` extract operator
+
+```Go
+package main
+
+import "fmt"
+
+func main() {
+	s := []int{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
+
+	fmt.Println("s[:]", s[:])
+	fmt.Println("s[2:]", s[2:])
+	fmt.Println("s[:4]", s[:4])
+	fmt.Println("s[2:4]", s[2:4])
+}
+```
+
+![blog-head-image](/images/doc/golang-slice-2.png)
+
+[Try in Go Playground](https://play.golang.org/p/1naC_0qQz_E){:target="_blank"}
+[Try in Go Playground](https://play.golang.org/p/qKtVAka498Z){:target="_blank"}
+
+### The slice operator
+
+- Every slice is built on top of an underlying array. It’s the underlying array that actually holds the slice’s data; the slice is merely a view into some (or all) of the array’s elements.
+
+- Change the underlying array, change the slice
+
 ## MAPs
 ![blog-head-image](/images/doc/golang-map-1.png)
 
