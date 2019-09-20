@@ -3,17 +3,17 @@ layout: post
 title: "Structs in Go"
 date: 2019-09-20
 author: DonOfDen
-tags: [go, golang, strucks]
-description: An Intro to Go Strucks, Unlike traditional Object-Oriented Programming, Go does not have class-object architecture. Rather we have structures which hold complex data structures.
+tags: [go, golang, Structs]
+description: An Intro to Go Structs, Unlike traditional Object-Oriented Programming, Go does not have class-object architecture. Rather we have structures which hold complex data structures.
 ---
 
-# Strucks
+# Structs
 
 - Unlike traditional Object-Oriented Programming, Go does not have class-object architecture. Rather we have structures which hold complex data structures.
 
 - We learned about slices, which store a list of values. Then we learned about maps, which map a list of keys to a list of values. But both of these data structures can only hold values of one type. Sometimes, you need to group together values of several types. 
 
-![blog-head-image](/images/doc/golang-struck-1.png)
+![blog-head-image](/images/doc/golang-Structs-1.png)
 
 ```Go
 type Employee struct{
@@ -44,7 +44,7 @@ func main() {
 	// Access struct fields using the dot operator
 	fmt.Println("Access struct fields using the dot operator list.id = ", listOne.id)
 
-	// Assigning values to struck using the dot operator
+	// Assigning values to Structs using the dot operator
 	listOne.name = "Aravind"
 	listOne.id = 10
 	listOne.toggle = true
@@ -187,7 +187,7 @@ func f() {
 
 ## Defined 
 
-Type Declaration: Which we discussed in struck.
+Type Declaration: Which we discussed in Structs.
 
 ![blog-head-image](/images/doc/golang-type-1.png)
 
