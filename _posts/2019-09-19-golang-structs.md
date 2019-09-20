@@ -13,7 +13,7 @@ description: An Intro to Go Structs, Unlike traditional Object-Oriented Programm
 
 - We learned about slices, which store a list of values. Then we learned about maps, which map a list of keys to a list of values. But both of these data structures can only hold values of one type. Sometimes, you need to group together values of several types. 
 
-![blog-head-image](/images/doc/golang-Structs-1.png)
+![blog-head-image](/images/doc/golang-structs-1.png)
 
 ```Go
 type Employee struct{
