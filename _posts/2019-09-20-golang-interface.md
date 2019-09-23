@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Interface in Go"
+title: "Interface, Goroutines & Channels in Go"
 date: 2019-09-20
 author: DonOfDen
-tags: [go, golang, Interface, pointers]
+tags: [go, golang, Interface, pointers, goroutines, Channels]
 description: Only way to achieve Polymorphism in Go.
 ---
 
@@ -204,4 +204,169 @@ func main() {
 	printType(country)
 }
 ```
-[Try in Go Playground](https://play.golang.org/p/MCJewCz4rXa){:target="_blank"}
+[Try in Go Playground](https://play.golang.org/p/IGcnB5Mtr7l){:target="_blank"}
+
+# Goroutines
+
+- Concurrency in Golang is the ability for functions to run independent of each other.
+- Goroutines are functions that are run concurrently. Golang provides Goroutines as a way to handle operations concurrently.
+
+- New goroutines are created by the `go` statement.
+
+![blog-head-image](/images/doc/golang-goroutines-1.png)
+
+```Go
+package main
+
+import (
+	"fmt"
+	"io/ioutil"
+	"log"
+	"net/http"
+)
+
+type Page struct {
+	URL  string
+	Size int
+}
+
+func responseSize(url string, channel chan Page) {
+	fmt.Println("Getting", url)
+	response, err := http.Get(url)
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer response.Body.Close()
+	body, err := ioutil.ReadAll(response.Body)
+	if err != nil {
+		log.Fatal(err)
+	}
+	channel <- Page{URL: url, Size: len(body)}
+}
+
+func main() {
+	pages := make(chan Page)
+	urls := []string{"https://example.com/",
+		"https://golang.org/", "https://golang.org/doc"}
+	for _, url := range urls {
+		go responseSize(url, pages)
+	}
+	for i := 0; i < len(urls); i++ {
+		page := <-pages
+		fmt.Printf("%s: %d\n", page.URL, page.Size)
+	}
+}
+
+```
+
+# Waiting for Goroutines to Finish Execution
+
+- The Add method is used to add a counter to the WaitGroup.
+
+- The Done method of WaitGroup is scheduled using a defer statement to decrement the WaitGroup counter.
+
+- The Wait method of the WaitGroup type waits for the program to finish all goroutines.
+
+```Go
+package main
+
+import (
+	"fmt"
+	"io/ioutil"
+	"log"
+	"net/http"
+	"sync"
+)
+
+// WaitGroup is used to wait for the program to finish goroutines.
+var wg sync.WaitGroup
+
+type Page struct {
+	URL  string
+	Size int
+}
+
+func responseSize(url string) {
+	// Schedule the call to WaitGroup's Done to tell goroutine is completed.
+	defer wg.Done()
+
+	fmt.Println("Getting", url)
+	response, err := http.Get(url)
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer response.Body.Close()
+	body, err := ioutil.ReadAll(response.Body)
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Printf("%s: %d\n", url, len(body))
+}
+
+func main() {
+
+	urls := []string{
+		"https://golang.org/",
+		"https://golang.org/doc",
+		"https://donofden.com/",
+	}
+	for _, url := range urls {
+		wg.Add(1)
+		go responseSize(url)
+	}
+
+	// Wait for the goroutines to finish.
+	wg.Wait()
+	fmt.Println("Terminating Program")
+}
+```
+
+## Channels
+
+- channel used to share data between goroutines
+
+![blog-head-image](/images/doc/golang-channel-1.png)
+
+- To actually create a channel, you need to call the built-in make function
+
+![blog-head-image](/images/doc/golang-channel-2.png)
+
+Rather than declare the channel variable separately, in most cases it’s easier to just use a short variable declaration:
+
+![blog-head-image](/images/doc/golang-channel-3.png)
+
+## Sending and receiving values with channels
+
+To send a value on a channel, you use the `<-` operator,
+
+![blog-head-image](/images/doc/golang-channel-4.png)
+
+You also use the `<-` operator to receive values from a channel, but the positioning is different: 
+
+![blog-head-image](/images/doc/golang-channel-5.png)
+
+```Go
+package main
+
+import (
+    "fmt"
+)
+
+func CalculateValue(values chan int) {
+    value := 20
+    fmt.Println("Calculated Random Value: {}", value)
+    values <- value
+}
+
+func main() {
+    fmt.Println("Go Channel Tutorial")
+
+    values := make(chan int)
+    defer close(values)
+
+    go CalculateValue(values)
+
+    value := <-values
+    fmt.Println(value)
+}
+```
