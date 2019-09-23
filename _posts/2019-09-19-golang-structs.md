@@ -112,7 +112,7 @@ func main() {
 
 - struct comparison
 
-## Types
+# Types
 
 ```Go
 bool
@@ -185,7 +185,7 @@ func f() {
 }
 ```
 
-## Defined 
+# Defined 
 
 Type Declaration: Which we discussed in Structs.
 
@@ -231,7 +231,7 @@ func main() {
 
 [Try in Go Playground](https://play.golang.org/p/z87Tz6FfING){:target="_blank"}
 
-## Pointers in Golang
+# Pointers in Golang
 
 - Pointers in Go programming language or Golang is a variable which is used to store the memory address of another variable.
 - Pointers in Golang is also termed as the special variables.
@@ -244,6 +244,10 @@ func main() {
 `&` - used to returns the address of a variable or to access the address of a variable to a pointer.
 
 ![blog-head-image](/images/doc/golang-pointer-1.jpg)
+
+## Why pointers?
+
+- One way to use pointers over variables is to eliminate duplicate memory required. For example, if you have some large complex object, you can use a pointer to point to that variable for each reference you make. With a variable, you need to duplicate the memory for each copy.
 
 ```Go
 package main
@@ -292,7 +296,3 @@ Some Additional Example with Methods
 - A method in Go is simply a function that is declared with a receiver. If you want to modify the data of a receiver from the method, the receiver must be a pointer as shown below.
 
 [Try in Go Playground](https://play.golang.org/p/kKAU9KwJ3xJ){:target="_blank"}
-
-## Why pointers?
-
-- One way to use pointers over variables is to eliminate duplicate memory required. For example, if you have some large complex object, you can use a pointer to point to that variable for each reference you make. With a variable, you need to duplicate the memory for each copy.
