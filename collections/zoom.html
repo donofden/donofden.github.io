@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>Zoom Image - Mouse Over</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-zoom/1.7.18/jquery.zoom.min.js"></script>
+	<style type="text/css">
+	</style>
+	<script type="text/javascript">
+		$(function () {
+            $('.zoom-image').each(function () {
+                var originalImagePath = $(this).find('img').data('original-image');
+                var zoomSize = $(this).find('img').data('zoom-size');
+                console.log(zoomSize);
+                $(this).zoom({
+                    url: originalImagePath,
+                    magnify: zoomSize
+                });
+            });
+        });
+	</script>
+</head>
+
+<body style="text-align: center;">
+	<h1>Zoom Image - Mouse Over</h1>
+	<div class="zoom-wrapper zoom-image" style="width: 400px;height: 400px;margin: 0 auto;">
+		<img class="zoom-photo" data-original-image="http://placehold.it/900x900" src="http://placehold.it/900x900" zoom-size="2" width="400" height="400">
+	</div>
+</body>
+
+</html>
