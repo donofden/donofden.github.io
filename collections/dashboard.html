@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Bootstrap Dashboard Example</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="http://code.highcharts.com/highcharts.js"></script>
+      <script>
+         var noBorder = {
+            states: {
+               hover: {
+                     halo: {
+                        size: 1
+                     }
+               }
+            }
+         };
+         var labels = [
+            'Gasto Real <br>Presupuesto USD',
+            'Gasto Real <br>Presupuesto USD',
+            'Gasto Real <br>Presupuesto USD',
+            'Gasto Real <br>Presupuesto USD',
+            'Gasto Real <br>Presupuesto USD',
+            'Gasto Real <br>Presupuesto USD'
+         ];
+         var theData = [{
+               name: 'Company 1',
+               data: [20, 7.617, 12.101, 18.839, 18.022, 7.644],
+               color: '#ef731d'
+            },
+            {
+               name: 'Company 2',
+               data: [4.123, 12.862, 14.561, 13.754, 12.226, 11.135],
+               color: '#edaa01'
+            }
+         ];
+
+
+         $(function() {
+            /* Chart 1 Start */
+            $('#container').highcharts({
+               chart: {
+                     type: 'bar'
+               },
+               legend: {
+                     enabled: false
+               },
+               title: false,
+               subtitle: false,
+               /*legend: {
+                  align: 'center',
+                  layout: 'horizontal',
+                  verticalAlign: 'bottom'
+               },*/
+               plotOptions: {
+                     bar: {
+                        groupPadding: 0,
+                        pointPadding: 0.1,
+                     },
+                     series: {
+                        dataLabels: {
+                           enabled: false,
+                           formatter: function() {
+                                 var out = '<span class="col-chart-label">',
+                                    series = this.point.series.chart.series,
+                                    p1 = series[0].yData[this.point.x],
+                                    p2 = series[1].yData[this.point.x];
+                                 console.log(series, p1, p2);
+                                 out += this.y + ' / ' + (p1 + p2);
+                                 out += '</span>'
+                                 return out;
+                           },
+                           useHTML: true
+                        }
+                     }
+               },
+               series: theData,
+               tooltip: {
+                     enabled: true
+               },
+               xAxis: {
+                     categories: labels,
+                     labels: {
+                        formatter: false,
+                        overflow: 'justify',
+                        rotation: false
+                     },
+                     reversed: true
+               },
+               yAxis: {
+                     visible: false
+               },
+            });
+            /* Chart 1 End */
+
+            // Chart 2 & 3 bar colors
+            var colors = ['#dc2a25', '#ef731d', '#edaa01', '#f0d402', '#6cbb60'];
+
+            /* Chart 2 Start */
+            $('#container-left').highcharts({
+               chart: {
+                     type: 'bar',
+               },
+               xAxis: {
+                     categories: ['781234', 'CD2345', 'AR2345', 'UR2345', 'CO6875']
+               },
+
+               title: false,
+               subtitle: false,
+               legend: {
+                     enabled: false
+               },
+               tooltip: {
+                     enabled: true
+               },
+               yAxis: {
+                     visible: false
+               },
+               plotOptions: {
+                     bar: {
+                        groupPadding: 0,
+                        pointPadding: 0.1,
+                        colorByPoint: true,
+                        colors: colors,
+                        dataLabels: {
+                           enabled: true,
+                        }
+                     },
+
+               },
+
+               series: [{
+                     data: [5.10, 4.25, 4.20, 4.12, 4.10],
+               }],
+            });
+            /* Chart 2 End */
+
+            /* Chart 3 Start */
+            var colors = ['#dc2a25', '#ef731d', '#edaa01', '#f0d402', '#6cbb60'];
+            $('#container-right').highcharts({
+               chart: {
+                     type: 'bar',
+               },
+               xAxis: {
+                     categories: ['781234', 'CD2345', 'AR2345', 'UR2345', 'CO6875']
+               },
+
+               title: false,
+               subtitle: false,
+               legend: {
+                     enabled: false
+               },
+               tooltip: {
+                     enabled: true
+               },
+               yAxis: {
+                     visible: false
+               },
+               plotOptions: {
+                     bar: {
+                        groupPadding: 0,
+                        pointPadding: 0.1,
+                        colorByPoint: true,
+                        colors: colors,
+                        dataLabels: {
+                           enabled: true,
+                        }
+                     },
+
+               },
+
+               series: [{
+                     data: [0.97, 1.0, 1.05, 1.10, 1.15],
+               }],
+               /*chart: {
+                     type: 'bar',
+               },
+               xAxis: {
+                     categories: ['781234', 'CD2345', 'AR2345', 'UR2345', 'CO6875'],
+               },
+               title: false,
+               subtitle: false,
+               legend: {
+                     enabled: false
+               },
+               tooltip: {
+                     enabled: true
+               },
+               yAxis: {
+                     visible: false
+               },
+               plotOptions: {
+                     bar: {
+                        groupPadding: 0,
+                        pointPadding: 0.1,
+                        colorByPoint: true,
+                        colors: colors,
+                        dataLabels: {
+                           enabled: true,
+                        }
+                     },
+                     line: {
+                        colorByPoint: false,
+                        dataLabels: {
+                           enabled: false,
+                        },
+                        marker:{
+                           enabled: false,
+                        }
+                     },
+               },
+               series: [{
+                        data: [{
+                           y: 0.97,
+                           color: '#dc2a25'
+                        },{
+                           y: 1.0,
+                           color: '#ef731d'
+                        },
+                        {
+                           y: 1.05,
+                           color: '#edaa01'
+                        },
+                        {
+                           y: 1.10,
+                           color: '#f0d402'
+                        },
+                        {
+                           y: 1.15,
+                           color: '#6cbb60'
+                        }],
+                        type: 'column'
+                     },
+                     {
+                        name: 'Spot value at midnight',
+                        data: [1, 1, 1, 1, 1],
+                        type: 'line',
+                     }
+               ],*/
+            });
+            
+            /* Chart 3 End */
+            Highcharts.setOptions({
+               colors: ['#6cbb60', '#f0d402']
+            });
+            $('#container-bottom').highcharts({
+               chart: {
+                     renderTo: 'container3',
+                     type: 'pie',
+                     margin: 0,
+                     height: 155,
+               },
+
+               plotOptions: {
+                     pie: {
+                        slicedOffset: 0,
+                        size: '100%',
+                        dataLabels: {
+                           enabled: false
+                        }
+                     },
+                     series: noBorder
+               },
+               title: {
+                     text: '97%',
+                     align: 'center',
+                     verticalAlign: 'middle',
+                     style: {
+                        fontSize: '24px',
+                        fontWeight: 'Bold',
+                        fontFamily: 'Arial, Helvetica, sans',
+                        color: 'black',
+                     }
+               },
+               tooltip: {
+                     enabled: true,
+                     animation: true,
+                     backgroundColor: null
+               },
+               credits: {
+                     enabled: false
+               },
+               series: [{
+                     name: 'Data Here',
+                     data: [
+                        ["MSIE", 97],
+                        ["USB", 3]
+                     ],
+                     innerSize: '50%',
+                     showInLegend: false,
+                     dataLabels: {
+                        enabled: false
+                     },
+                     states: {
+                        hover: {
+                           enabled: true
+                        }
+                     }
+               }]
+            });
+         });
+      </script>
+      <style>
+         .heading-font {
+         font-size: 12px;
+         }
+         .text-center {
+         text-align: center;
+         }
+         .div-style{
+         margin-bottom: 5px;
+         padding-right: 3px;
+         padding-left: 3px;
+         border: 1px solid #E8E8E8
+         }
+         .div-head-inner{
+         margin-bottom: 5px;
+         padding-right: 5px;
+         padding-left: 5px;
+         }
+         .circle {
+         margin: 3%;
+         display: inline-block;
+         padding: 1px;
+         text-align: center;
+         width: 80px;
+         height: 80px;
+         border-radius: 100%;
+         border: 2px solid #8dc983;
+         }
+         .square {
+         margin: 3%;
+         display: inline-block;
+         padding: 1px;
+         text-align: center;
+         width: 80px;
+         height: 83px;
+         }
+         .circle a {
+         color: black;
+         }
+         .square a {
+         color: black;
+         }
+         .head-inner-style{
+         font-weight:bold;
+         padding-top: 7px;
+         padding-bottom: 7px;
+         }
+         .bg-color {
+         background-color: #E8E8E8;
+         }
+         .inner-box-head-style {
+         padding-top: 7px;
+         padding-left: 3px;
+         margin-right: 3px;
+         margin-left: 3px;
+         padding-bottom: 7px;
+         }
+         .inner-number {
+         font-size: 18px;
+         margin-top: 35%;
+         margin-bottom: 10px;
+         font-family: inherit;
+         font-weight: 500;
+         line-height: 1.1;
+         color: inherit;
+         }
+         .block-2-style{
+         padding-left: 3px;
+         padding-right: 3px;
+         }
+         .block-3-style{
+         padding-left: 3px;
+         padding-right: 3px;
+         height: 160px;
+         border: 1px solid #E8E8E8;
+         margin-top: 5px;
+         margin-bottom: 5px;
+         }
+         .highcharts-credits{
+         display: none;
+         }
+         .box-inner-text-h4{
+         font-size: 18px;
+         }
+         .box-inner-text-h1{
+         font-size: 30px;
+         font-weight: bold;
+         }
+         .box-inner-top-align{
+         margin-top: 12px;
+         }
+      </style>
+   </head>
+   <body>
+      <div class="container-fluid">
+         <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+               <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                  <h1>Hello World!</h1>
+                  <br>Resize the browser window to see the effect. Also try to remove the div clearfix line and see what happens.
+               </div>
+               <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="background-color:#E8E8E8">
+                  <h1>BI Bosco</h1>
+                  <br>Resize the browser window to see the effect. Also try to remove the div clearfix line and see what happens.
+               </div>
+            </div>
+         </div>
+         <div class="row" style="margin-bottom: 5px;">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+               <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                  <div class="row">
+                     <form class="col-md-12">
+                        <label>Select</label>
+                        <select class="form-control select2">
+                           <option>Select</option>
+                           <option>Car</option>
+                           <option>Bike</option>
+                           <option>Scooter</option>
+                           <option>Cycle</option>
+                           <option>Horse</option>
+                        </select>
+                     </form>
+                  </div>
+               </div>
+               <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6"></div>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+               <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                  <div class="row">
+                     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 heading-font text-center div-style head-inner-style">
+                        Total Vechicle
+                     </div>
+                     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 heading-font text-center div-style head-inner-style">
+                        Total Price
+                     </div>
+                     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 heading-font text-center div-style head-inner-style">
+                        Total Employee
+                     </div>
+                  </div>
+                  <div class="row div-head-inner">
+                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center head-inner-style bg-color" style="color:#8dc983;">
+                        Information in General
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 heading-font text-center div-style" style="border:0;">
+                        <div class="row">
+                           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                              <div class="bg-color inner-box-head-style">
+                                 Total Employee 1
+                              </div>
+                           </div>
+                           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                              <div class="circle">
+                                 <a href="#section_1">
+                                    <p class="inner-number">75</p>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 heading-font text-center div-style" style="border:0;">
+                        <div class="row">
+                           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                              <div class="bg-color inner-box-head-style">
+                                 Total Employee 1
+                              </div>
+                           </div>
+                           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                              <div class="circle">
+                                 <a href="#section_1">
+                                    <p class="inner-number">134,810</p>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 heading-font text-center div-style" style="border:0;">
+                        <div class="row">
+                           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                              <div class="bg-color inner-box-head-style">
+                                 Total Employee 1
+                              </div>
+                           </div>
+                           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                              <div class="circle">
+                                 <a href="#section_1">
+                                    <p class="inner-number">37,112</p>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                  <div class="row">
+                     <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 heading-font text-center div-style head-inner-style">
+                        Total Vechicle
+                     </div>
+                     <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 heading-font text-center div-style head-inner-style">
+                        Total Price
+                     </div>
+                     <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 heading-font text-center div-style head-inner-style">
+                        Total Employee
+                     </div>
+                     <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 heading-font text-center div-style head-inner-style">
+                        Total Employee
+                     </div>
+                  </div>
+                  <div class="row div-head-inner">
+                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center head-inner-style bg-color" style="color:#800000;">
+                        Regunations
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 heading-font text-center div-style">
+                        <div class="row">
+                           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                              <div class="bg-color inner-box-head-style">
+                                 Total Employee 1
+                              </div>
+                           </div>
+                           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                              <div class="square">
+                                 <a href="#section_1">
+                                    <h2>7</h2>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 heading-font text-center div-style">
+                        <div class="row">
+                           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                              <div class="bg-color inner-box-head-style">
+                                 Total Employee 1
+                              </div>
+                           </div>
+                           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                              <div class="square">
+                                 <a href="#section_1">
+                                    <h2>3</h2>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 heading-font text-center div-style">
+                        <div class="row">
+                           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                              <div class="bg-color inner-box-head-style">
+                                 Total Employee 1
+                              </div>
+                           </div>
+                           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                              <div class="square">
+                                 <a href="#section_1">
+                                    <h2>19</h2>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 heading-font text-center div-style">
+                        <div class="row">
+                           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                              <div class="bg-color inner-box-head-style">
+                                 Total Employee 1
+                              </div>
+                           </div>
+                           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                              <div class="square">
+                                 <a href="#section_1">
+                                    <h2>4</h2>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                  <div class="row">
+                     <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 heading-font text-center div-style head-inner-style">
+                        Total Vechicle
+                     </div>
+                     <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 heading-font text-center div-style head-inner-style">
+                        Total Price
+                     </div>
+                     <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 heading-font text-center div-style head-inner-style">
+                        Total Employee
+                     </div>
+                     <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 heading-font text-center div-style head-inner-style">
+                        Total Employee
+                     </div>
+                  </div>
+                  <div class="row div-head-inner">
+                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center head-inner-style bg-color" style="color:#000066;">
+                        Maintanence
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 heading-font text-center div-style">
+                        <div class="row">
+                           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                              <div class="bg-color inner-box-head-style">
+                                 Total Employee 1
+                              </div>
+                           </div>
+                           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                              <div class="square">
+                                 <a href="#section_1">
+                                    <h2>3</h2>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 heading-font text-center div-style">
+                        <div class="row">
+                           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                              <div class="bg-color inner-box-head-style">
+                                 Total Employee 1
+                              </div>
+                           </div>
+                           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                              <div class="square">
+                                 <a href="#section_1">
+                                    <h2>5</h2>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 heading-font text-center div-style">
+                        <div class="row">
+                           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                              <div class="bg-color inner-box-head-style">
+                                 Total Employee 1
+                              </div>
+                           </div>
+                           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                              <div class="square">
+                                 <a href="#section_1">
+                                    <h2>2</h2>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 heading-font text-center div-style">
+                        <div class="row">
+                           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                              <div class="bg-color inner-box-head-style">
+                                 Total Employee 1
+                              </div>
+                           </div>
+                           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                              <div class="square">
+                                 <a href="#section_1">
+                                    <h2>10</h2>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+               <div class="row div-head-inner">
+                  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-center block-2-style">
+                     <div class=" head-inner-style bg-color">Gasto Vs Presupuesto (USD)</div>
+                     <div id="container" style="height:240px"></div>
+                  </div>
+                  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-center block-2-style">
+                     <div class=" head-inner-style bg-color">Clasification of conductoures KM/LITORS</div>
+                     <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                           <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-center block-2-style">
+                              5 Mejores rendimientos
+                              <div id="container-left" style="height:220px"></div>
+                           </div>
+                           <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-center block-2-style">
+                              5 Rendimientos por  mejorar
+                              <div id="container-right" style="height:220px"></div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+               <div class="row div-head-inner">
+                  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-center block-2-style">
+                     <div class=" head-inner-style bg-color">Consumo acumulado Real Vs Presupuesto (USD)</div>
+                     <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                           <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-center">
+                              <div class="col-md-12 block-3-style">
+                                 <div id="container-bottom" style="height:220px"></div>
+                              </div>
+                           </div>
+                           <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-center">
+                              <div class="col-md-12 block-3-style text-center">
+                                 <div class="row">
+                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                       Gasto Real <br>
+                                       <strong>Total Expenses</strong>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                       Presupuesto <br>
+                                       <strong>Total Budget</strong>
+                                    </div>
+                                 </div>
+                                 <br>
+                                 <div class="row">
+                                    <div class="col-md-12 text-center box-inner-top-align">
+                                       <span class="box-inner-text-h4">$27,240</span>
+                                       &nbsp; &nbsp;
+                                       <span class="box-inner-text-h1">
+                                       Vs
+                                       </span>
+                                       &nbsp; &nbsp;
+                                       <span class="box-inner-text-h4">  $28,000</span>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-center block-2-style">
+                     <div class=" head-inner-style bg-color">Cumplimento de ahorro Real Vs Meta (Valores acumuladoes en USD)</div>
+                     <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                           <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-center">
+                              <div class="col-md-12 block-3-style" style="stroke: green; fill: green;">
+                                 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="svg-triangle" width='100' height='100'>
+                                    <path d="M 35,3.5 68,70.5 3,70.5 z"/>
+                                 </svg>
+                              </div>
+                           </div>
+                           <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-center">
+                              <div class="col-md-12 block-3-style" style="transform: rotate(-180deg); stroke: red; fill: red;">
+                                 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="svg-triangle" width='100' height='100'>
+                                    <path d="M 35,3.5 68,70.5 3,70.5 z"/>
+                                 </svg>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>
