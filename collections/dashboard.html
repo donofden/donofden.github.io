@@ -8,6 +8,8 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
       <script type="text/javascript" src="http://code.highcharts.com/highcharts.js"></script>
+      <!-- Doc: Grouped Categories - Highcharts module - http://blacklabel.github.io/grouped_categories/ -->
+      <script src="grouped-categories.js"></script>
       <script>
          var noBorder = {
             states: {
@@ -40,59 +42,103 @@
 
 
          $(function() {
-            /* Chart 1 Start */
             $('#container').highcharts({
-               chart: {
-                     type: 'bar'
-               },
-               legend: {
-                     enabled: false
-               },
-               title: false,
-               subtitle: false,
-               /*legend: {
+                  chart: {
+                        type: "bar"
+                  },
+                  legend: {
+                        enabled: false
+                  },
+                  title: false,
+                  subtitle: false,
+                  tooltip: {
+                        enabled: true
+                  },
+                  yAxis: {
+                        visible: false
+                  },
+                  plotOptions: {
+                        bar: {
+                              groupPadding: 0,
+                              pointPadding: 0.1,
+                        },
+                  },
+                  series: [{
+                        data: [20, 7.617, 12.101, 18.839, 18.022, 7.644],
+                        color: '#ef731d'
+
+                  }, {
+                        data: [4.123, 12.862, 14.561, 13.754, 12.226, 11.135],
+                        color: '#edaa01'
+                  }],
+                  xAxis: {
+                        labels: {
+                              x: -8
+                        },
+                        categories: [{
+                              name: "enero",
+                              categories: ["Gasto Real", "Presupusto USD"]
+                        }, {
+                              name: "febrero",
+                              categories: ["Gasto Real", "Presupusto USD"]
+                        }, {
+                              name: "febrero",
+                              categories: ["Gasto Real", "Presupusto USD"]
+                        }]
+                  }
+                  /* Chart 1 Start */
+
+                  /*chart: {
+                        type: 'bar'
+                  },
+                  legend: {
+                        enabled: false
+                  },
+                  title: false,
+                  subtitle: false,
+                  /*legend: {
                   align: 'center',
                   layout: 'horizontal',
                   verticalAlign: 'bottom'
-               },*/
-               plotOptions: {
-                     bar: {
+                  },*/
+                  /*plotOptions: {
+                        bar: {
                         groupPadding: 0,
                         pointPadding: 0.1,
-                     },
-                     series: {
+                        },
+                        series: {
                         dataLabels: {
-                           enabled: false,
-                           formatter: function() {
-                                 var out = '<span class="col-chart-label">',
+                              enabled: false,
+                              formatter: function() {
+                                    var out = '<span class="col-chart-label">',
                                     series = this.point.series.chart.series,
                                     p1 = series[0].yData[this.point.x],
                                     p2 = series[1].yData[this.point.x];
-                                 console.log(series, p1, p2);
-                                 out += this.y + ' / ' + (p1 + p2);
-                                 out += '</span>'
-                                 return out;
-                           },
-                           useHTML: true
+                                    console.log(series, p1, p2);
+                                    out += this.y + ' / ' + (p1 + p2);
+                                    out += '</span>'
+                                    return out;
+                              },
+                              useHTML: true
                         }
-                     }
-               },
-               series: theData,
-               tooltip: {
-                     enabled: true
-               },
-               xAxis: {
-                     categories: labels,
-                     labels: {
+                        }
+                  },
+                  series: theData,
+                  tooltip: {
+                        enabled: true
+                  },
+                  xAxis: {
+                        categories: labels,
+                        labels: {
                         formatter: false,
                         overflow: 'justify',
                         rotation: false
-                     },
-                     reversed: true
-               },
-               yAxis: {
-                     visible: false
-               },
+                        },
+                        reversed: true
+                  },
+                  yAxis: {
+                        visible: false
+                  },*/
             });
             /* Chart 1 End */
 
