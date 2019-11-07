@@ -12,7 +12,7 @@ You can find here small text art copy paste that you can put onto your Twitter, 
 
 These text art pictures were made specifically small enough to fit nicely into Twitter messages.
 
-```
+```html
 Well would you look at the time...
             12
      11     ^      1
@@ -24,16 +24,20 @@ Well would you look at the time...
 ```
 
 
-```
 me talking about work:
-:arrow_forward: :radio_button:──────── 00:05
-me talking about friends & family:
-:arrow_forward: :radio_button:──────── 00:10
-me talking about how terrible GW37 has been:
-:arrow_forward: :radio_button:──────── 5:54:25
-```
 
-```
+:arrow_forward: :radio_button:──────── 00:05
+
+me talking about friends & family:
+
+:arrow_forward: :radio_button:──────── 00:10
+
+me talking about how terrible GW37 has been:
+
+:arrow_forward: :radio_button:──────── 5:54:25
+
+
+```html
 ʷʰᵉᶰ
                           ʷʰᵉᶰ
       ʷʰᵉᶰ
@@ -75,11 +79,11 @@ zzz
 ```
 Heart rate when Arsenal play at home:-
 ⠀   /\⠀ ⠀ ⠀ ⠀  /\    
-__ /   \   __/\__ /   \    _
+__ /   \   __/\__ / \    _
           \/⠀ ⠀ ⠀ ⠀  \/
 Heart rate when Arsenal play away from home:-
 ⠀/\⠀      /\⠀     /\
-/  \  /\/  \  /\_/  \   /\_
+/  \  /\/  \  /\_/  \__/\_
 ⠀   \/⠀⠀   \/⠀⠀   \/
 ```
 
