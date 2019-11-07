@@ -3,7 +3,7 @@ layout: post
 title: "Kashmir Trip - YOU should visit Kashmir at least once in your lifetime"
 date: 2017-12-02
 author: DonOfDen
-tags: [facebook, old-post, disturbed, kashmir]
+tags: [facebook, old-post, kashmir, Srinagar, Pahalgam, Gulmarg, Sonamarg, Leh, Kargil]
 description: This could be not just the trip of a lifetime but the experience of a lifetime.
 ---
 
