@@ -66,3 +66,18 @@ func IsSliceEqual(a, b []string) bool {
 }
 ```
 [Try in Go Playground](https://play.golang.org/p/1W0_dnGIhL1){:target="_blank"}
+
+## Check if value is in slice - stringInSlice
+```Go
+// There is no built-in operator to do it in Go. You need to iterate over the array. 
+// Returns a boolean if string is available/not
+func stringInSlice(a string, list []string) bool {
+    for _, b := range list {
+        if b == a {
+            return true
+        }
+    }
+    return false
+}
+```
+[Try in Go Playground](https://play.golang.org/p/HWdrhmO8YKY){:target="_blank"}
