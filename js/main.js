@@ -135,12 +135,12 @@
             var root = '';
             var section = $(this).data('nav-section'),
                 navbar = $('#navbar');
-            if ((section == 'blog')||(section == 'travels')) {
+            if ((section == 'blog')||(section == 'travels')||(section == 'gallery')) {
                 return true;
             }
 
 
-            if (((pathName[1] == 'blog') && (section != 'blog'))||((pathName[1] == 'travels') && (section != 'travels'))) {
+            if (((pathName[1] == 'blog') && (section != 'blog'))||((pathName[1] == 'travels') && (section != 'travels'))||((pathName[1] == 'gallery') && (section != 'gallery'))) {
                 var root = '';
                 for (var i = 0; i < pathName.length; i++) {
                     root += "../";
@@ -295,6 +295,9 @@ $(document).ready(function() {
     } else if (pathName[1] == 'travels'){
         $('#navbar ul li').removeClass('active');
         $('a[data-nav-section="travels"]').parent().addClass('active');
+    } else if (pathName[1] == 'gallery'){
+        $('#navbar ul li').removeClass('active');
+        $('a[data-nav-section="gallery"]').parent().addClass('active');
     } else if (pathName[1] != 'blog') {
         $('html, body').animate({
             scrollTop: $('[data-section="' + pageHash.replace('#', '') + '"]').offset().top - 55
