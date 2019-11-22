@@ -408,7 +408,8 @@ figure figcaption {
 }
 #colorlib-hero .flexslider .slider-text > .slider-text-inner .btn.btn-learn {
 	color: #000;
-	border: 1px solid #000;
+	/*border: 1px solid #000;*/
+	border: 2px solid #43a2f0;
 	background: transparent !important;
 }
 #colorlib-hero .flexslider .slider-text > .slider-text-inner .btn.btn-learn:hover {
@@ -1996,4 +1997,14 @@ img[alt=blog-head-image] { width:100%; }
 
 .blog-list{
     margin-top: 45px;
+}
+
+/* Home Banner Text style */
+
+.banner-text {
+	background-color: #fff;
+	padding-right: 10px !important;
+	padding-left: 10px !important;
+	padding-top: 10px !important;
+	padding-bottom: 10px !important;
 }
