@@ -1,5 +1,6 @@
 function initMap() {
     var zoomSize = 3;
+    var html = '<p id="control-text"> a bunch of html select menu goes in here </p>';
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: zoomSize,
         center: {
@@ -7,10 +8,14 @@ function initMap() {
             lng: 35.2433  // Turkey
         },
         mapTypeControl: true,
+        mapTypeControl: true,
         mapTypeControlOptions: {
+            style: google.maps.MapTypeControlStyle.DROPDOWN_MENU
+        }
+        /*mapTypeControlOptions: {
             style: google.maps.MapTypeControlStyle.DROPDOWN_MENU,
             mapTypeIds: ['roadmap', 'satellite', 'hybrid', 'terrain']
-        }
+        }*/
     });
     setMarker(map);
 
@@ -93,6 +98,63 @@ function initMap() {
     }];
 
     map.set('styles', styles);
+    var optionsDynamic = [];
+    var chicago = {lat: 41.85, lng: -87.65};
+    for (var i = 1; i < 10; i++) {
+        //start process to set up custom drop down
+        //create the options that respond to click
+        var name = 'Option - ' + i;
+        var value = 2*i;
+        console.log(name);
+        console.log(value);
+        var divOptions = {
+            gmap: map,
+            name: name,
+            title: "This acts like a button or click event ",
+            id: "mapOpt ",
+            action: function(){
+                map.setCenter(chicago);
+            }
+        }
+        var optionDiv1 = new optionDiv(divOptions);
+        optionsDynamic.push(optionDiv1);
+    }
+/*
+var divOptions2 = {
+        gmap: map,
+        name: 'Option2',
+        title: "This acts like a button or click event ",
+        id: "satelliteOpt ",
+        action: function(){
+            alert('option2');
+        }
+}
+
+var optionDiv2 = new optionDiv(divOptions2);*/
+
+//create the input box items
+
+//possibly add a separator between controls        
+var sep = new separator();
+
+//put them all together to create the drop down       
+var ddDivOptions = {
+    items: optionsDynamic,
+    id: "myddOptsDiv"              
+}
+//alert(ddDivOptions.items[1]);
+var dropDownDiv = new dropDownOptionsDiv(ddDivOptions);               
+        
+var dropDownOptions = {
+        gmap: map,
+        name: 'Select Option',
+        id: 'ddControl',
+        title: 'A custom drop down select with mixed elements',
+        position: google.maps.ControlPosition.LEFT_TOP,
+        dropDown: dropDownDiv 
+}
+
+var dropDown1 = new dropDownControl(dropDownOptions); 
 }
 
 google.maps.event.addDomListener(window, 'load', initMap);
@@ -110,7 +172,7 @@ function setMarker(map) {
     var location = new google.maps.LatLng(53.3811, -1.4701);
     // Marker Icon
     var image = {
-        url: './marker/icon_32X32.png',
+        url: './marker/icon_16X16.png',
         //size: new google.maps.Size(zoomSize * 2, zoomSize * 2),
         origin: null,
         anchor: null,
@@ -171,28 +233,28 @@ function setMarker(map) {
                     var zoom = map.getZoom();
                     var icons = [
                         "icon_16X16.png", // Zoom - 0
-                        "icon_20X20.png", // Zoom - 1
-                        "icon_20X20.png", // Zoom - 2
-                        "icon_24X24.png", // Zoom - 3
-                        "icon_24X24.png", // Zoom - 4
-                        "icon_32X32.png", // Zoom - 5
-                        "icon_32X32.png", // Zoom - 6
-                        "icon_32X32.png", // Zoom - 7
-                        "icon_32X32.png", // Zoom - 8
-                        "icon_32X32.png", // Zoom - 9
-                        "icon_48X48.png", // Zoom - 10
-                        "icon_48X48.png", // Zoom - 11
-                        "icon_48X48.png", // Zoom - 12
-                        "icon_48X48.png", // Zoom - 13
-                        "icon_48X48.png", // Zoom - 14
-                        "icon_64X64.png", // Zoom - 15
-                        "icon_64X64.png", // Zoom - 16
-                        "icon_64X64.png", // Zoom - 17
-                        "icon_64X64.png", // Zoom - 18
-                        "icon_64X64.png", // Zoom - 19
-                        "icon_128X128.png", // Zoom - 20
-                        "icon_128X128.png", // Zoom - 21
-                        "icon_128X128.png" // Zoom - 22
+                        "icon_16X16.png", // Zoom - 1
+                        "icon_16X16.png", // Zoom - 2
+                        "icon_16X16.png", // Zoom - 3
+                        "icon_16X16.png", // Zoom - 4
+                        "icon_16X16.png", // Zoom - 5
+                        "icon_16X16.png", // Zoom - 6
+                        "icon_16X16.png", // Zoom - 7
+                        "icon_16X16.png", // Zoom - 8
+                        "icon_16X16.png", // Zoom - 9
+                        "icon_16X16.png", // Zoom - 10
+                        "icon_16X16.png", // Zoom - 11
+                        "icon_16X16.png", // Zoom - 12
+                        "icon_16X16.png", // Zoom - 13
+                        "icon_16X16.png", // Zoom - 14
+                        "icon_16X16.png", // Zoom - 15
+                        "icon_16X16.png", // Zoom - 16
+                        "icon_16X16.png", // Zoom - 17
+                        "icon_16X16.png", // Zoom - 18
+                        "icon_16X16.png", // Zoom - 19
+                        "icon_16X16.png", // Zoom - 20
+                        "icon_16X16.png", // Zoom - 21
+                        "icon_16X16.png" // Zoom - 22
                     ];
                     imageIconPath = "./marker/" + icons[zoom];
 
@@ -213,3 +275,59 @@ function setMarker(map) {
         });
     });
 }
+
+    /************
+	 Classes to set up the drop-down control
+	 ************/
+          
+    function optionDiv(options){
+        var control = document.createElement('DIV');
+        control.className = "dropDownItemDiv";
+        control.title = options.title;
+        control.id = options.id;
+        control.innerHTML = options.name;
+        console.log(options.action);
+        google.maps.event.addDomListener(control,'click',options.action);
+        return control;
+    }
+    
+    function separator(){
+            var sep = document.createElement('DIV');
+            sep.className = "separatorDiv";
+            return sep;      		
+    }
+    
+    function dropDownOptionsDiv(options){
+       //alert(options.items[1]);
+         var container = document.createElement('DIV');
+         container.className = "dropDownOptionsDiv";
+         container.id = options.id;
+         for(i=0; i<options.items.length; i++){
+             container.appendChild(options.items[i]);
+         }
+        return container;        	
+     }
+    
+    function dropDownControl(options){
+         var container = document.createElement('DIV');
+         container.className = 'container';
+         
+         var control = document.createElement('DIV');
+         control.className = 'dropDownControl';
+         control.innerHTML = options.name;
+         control.id = options.name;
+         var arrow = document.createElement('IMG');
+         arrow.src = "http://maps.gstatic.com/mapfiles/arrow-down.png";
+         arrow.className = 'dropDownArrow';
+         control.appendChild(arrow);	      		
+         container.appendChild(control);    
+         container.appendChild(options.dropDown);
+         
+         options.gmap.controls[options.position].push(container);
+         google.maps.event.addDomListener(container,'click',function(){
+           (document.getElementById('myddOptsDiv').style.display == 'block') ? document.getElementById('myddOptsDiv').style.display = 'none' : document.getElementById('myddOptsDiv').style.display = 'block';
+           setTimeout( function(){
+               document.getElementById('myddOptsDiv').style.display = 'none';
+           }, 1500);
+         })      	  
+     }
