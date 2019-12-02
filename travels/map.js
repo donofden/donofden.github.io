@@ -243,18 +243,18 @@ function setMarker(map) {
                         "icon_16X16.png", // Zoom - 8
                         "icon_16X16.png", // Zoom - 9
                         "icon_16X16.png", // Zoom - 10
-                        "icon_16X16.png", // Zoom - 11
-                        "icon_16X16.png", // Zoom - 12
-                        "icon_16X16.png", // Zoom - 13
-                        "icon_16X16.png", // Zoom - 14
-                        "icon_16X16.png", // Zoom - 15
-                        "icon_16X16.png", // Zoom - 16
-                        "icon_16X16.png", // Zoom - 17
-                        "icon_16X16.png", // Zoom - 18
-                        "icon_16X16.png", // Zoom - 19
-                        "icon_16X16.png", // Zoom - 20
-                        "icon_16X16.png", // Zoom - 21
-                        "icon_16X16.png" // Zoom - 22
+                        "icon_32X32.png", // Zoom - 11
+                        "icon_32X32.png", // Zoom - 12
+                        "icon_32X32.png", // Zoom - 13
+                        "icon_32X32.png", // Zoom - 14
+                        "icon_32X32.png", // Zoom - 15
+                        "icon_32X32.png", // Zoom - 16
+                        "icon_32X32.png", // Zoom - 17
+                        "icon_32X32.png", // Zoom - 18
+                        "icon_32X32.png", // Zoom - 19
+                        "icon_32X32.png", // Zoom - 20
+                        "icon_32X32.png", // Zoom - 21
+                        "icon_32X32.png" // Zoom - 22
                     ];
                     imageIconPath = "./marker/" + icons[zoom];
 
