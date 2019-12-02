@@ -263,6 +263,150 @@
             "lng": 88.5577,
             "city": "Lachen, Sikkim.",
             "description": "Description"
+		},
+		{
+			"title": "Shivamogga, Karnataka",
+            "id": 34,
+            "lat": 13.9299,
+            "lng": 75.5681,
+            "city": "Shivamogga, Karnataka.",
+            "description": "Description"
+		},
+		{
+			"title": "Tumakuru, Karnataka",
+            "id": 35,
+            "lat": 13.3379,
+            "lng": 77.1173,
+            "city": "Tumakuru, Karnataka.",
+            "description": "Description"
+		},
+		{
+			"title": "Hosur, Tamil Nadu",
+            "id": 36,
+            "lat": 12.7409,
+            "lng": 77.8253,
+            "city": "Hosur, Tamil Nadu.",
+            "description": "Description"
+		},
+		{
+			"title": "Mysuru, Karnataka",
+            "id": 37,
+            "lat": 12.2958,
+            "lng": 76.6394,
+            "city": "Mysuru, Karnataka.",
+            "description": "Description"
+		},
+		{
+			"title": "Madikeri, Karnataka",
+            "id": 38,
+            "lat": 12.4244,
+            "lng": 75.7382,
+            "city": "Madikeri, Karnataka.",
+            "description": "Description"
+		},
+		{
+			"title": "Mangalore, Karnataka",
+            "id": 39,
+            "lat": 12.9141,
+            "lng": 74.8560,
+            "city": "Mangalore, Karnataka.",
+            "description": "Description"
+		},
+		{
+			"title": "Kozhikode, Kerala",
+            "id": 40,
+            "lat": 11.2588,
+            "lng": 75.7804,
+            "city": "Kozhikode, Kerala.",
+            "description": "Description"
+		},
+		{
+			"title": "Coimbatore, Tamil Nadu",
+            "id": 41,
+            "lat": 11.0168,
+            "lng": 76.9558,
+            "city": "Coimbatore, Tamil Nadu.",
+            "description": "Description"
+		},
+		{
+			"title": "Ooty, Tamil Nadu",
+            "id": 42,
+            "lat": 11.4102,
+            "lng": 76.6950,
+            "city": "Ooty, Tamil Nadu.",
+            "description": "Description"
+        },
+		{
+			"title": "Thrissur, Kerala",
+            "id": 43,
+            "lat": 10.5276,
+            "lng": 76.2144,
+            "city": "Thrissur, Kerala.",
+            "description": "Description"
+		},
+		{
+			"title": "Alappuzha, Kerala",
+            "id": 44,
+            "lat": 9.4981,
+            "lng": 76.3388,
+            "city": "Alappuzha, Kerala.",
+            "description": "Description"
+		},
+		{
+			"title": "Kollam, Kerala",
+            "id": 45,
+            "lat": 8.8932,
+            "lng": 76.6141,
+            "city": "Kollam, Kerala.",
+            "description": "Description"
+		},
+		{
+			"title": "Thiruvananthapuram, Kerala",
+            "id": 46,
+            "lat": 8.5241,
+            "lng": 76.9366,
+            "city": "Thiruvananthapuram, Kerala.",
+            "description": "Description"
+		},
+		{
+			"title": "Kottayam, Kerala",
+            "id": 47,
+            "lat": 9.5916,
+            "lng": 76.5222,
+            "city": "Kottayam, Kerala.",
+            "description": "Description"
+		},
+		{
+			"title": "Thiruvalla, Kerala",
+            "id": 48,
+            "lat": 9.3853,
+            "lng": 76.5750,
+            "city": "Thiruvalla, Kerala.",
+            "description": "Description"
+		},
+		{
+			"title": "Munnar, Kerala",
+            "id": 49,
+            "lat": 10.0889,
+            "lng": 77.0595,
+            "city": "Munnar, Kerala.",
+            "description": "Description"
+		},
+		{
+			"title": "Idukki, Kerala",
+            "id": 50,
+            "lat": 9.9189,
+            "lng": 77.1025,
+            "city": "Idukki, Kerala.",
+            "description": "Description"
+		},
+		{
+			"title": "Kumily, Kerala",
+            "id": 51,
+            "lat": 9.6051,
+            "lng": 77.1696,
+            "city": "Kumily, Kerala.",
+            "description": "Description"
 		}
 	]
 }
