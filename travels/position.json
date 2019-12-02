@@ -593,11 +593,27 @@
             "description": "Description"
 		},
 		{
-			"title": "Madras Crocodile Bank , Tamil Nadu",
+			"title": "Madras Crocodile Bank, Tamil Nadu",
             "id": 75,
             "lat": 12.7429,
             "lng": 80.2401,
-            "city": "Madras Crocodile Bank , Tamil Nadu.",
+            "city": "Madras Crocodile Bank, Tamil Nadu.",
+            "description": "Description"
+		},
+		{
+			"title": "Chittoor, Andhra Pradesh",
+            "id": 76,
+            "lat": 13.2172,
+            "lng": 79.1003,
+            "city": "Chittoor, Andhra Pradesh.",
+            "description": "Description"
+		},
+		{
+			"title": "Tirupati, Andhra Pradesh",
+            "id": 77,
+            "lat": 13.6288,
+            "lng": 79.4192,
+            "city": "Tirupati, Andhra Pradesh.",
             "description": "Description"
 		}
 	]
