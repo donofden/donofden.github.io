@@ -407,6 +407,198 @@
             "lng": 77.1696,
             "city": "Kumily, Kerala.",
             "description": "Description"
+		},
+		{
+			"title": "Pollachi, Tamil Nadu",
+            "id": 52,
+            "lat": 10.6609,
+            "lng": 77.0048,
+            "city": "Pollachi, Tamil Nadu.",
+            "description": "Description"
+		},
+		{
+			"title": "Kodagu (Coorg), Karnataka",
+            "id": 53,
+            "lat": 12.3375,
+            "lng": 75.8069,
+            "city": "Kodagu (Coorg), Karnataka.",
+            "description": "Description"
+		},
+		{
+			"title": "Kodagu (Coorg), Karnataka",
+            "id": 54,
+            "lat": 12.3375,
+            "lng": 75.8069,
+            "city": "Kodagu (Coorg), Karnataka.",
+            "description": "Description"
+		},
+		{
+			"title": "Tala Kaveri, Karnataka",
+            "id": 55,
+            "lat": 12.3836,
+            "lng": 75.4942,
+            "city": "Tala Kaveri, Karnataka.",
+            "description": "Description"
+		},
+		{
+			"title": "Wayanad, Kerala",
+            "id": 56,
+            "lat": 11.6854,
+            "lng": 76.1320,
+            "city": "Wayanad, Kerala.",
+            "description": "Description"
+		},
+		{
+			"title": "Salem, Tamil Nadu",
+            "id": 57,
+            "lat": 11.6643,
+            "lng": 78.1460,
+            "city": "Salem, Tamil Nadu.",
+            "description": "Description"
+		},
+		{
+			"title": "Doddabetta Peak, Tamil Nadu",
+            "id": 58,
+            "lat": 11.4007,
+            "lng": 76.7358,
+            "city": "Doddabetta Peak, Tamil Nadu.",
+            "description": "Description"
+		},
+		{
+			"title": "Pykara Waterfalls (Ooty), Tamil Nadu",
+            "id": 59,
+            "lat": 11.4745,
+            "lng": 76.6029,
+            "city": "Pykara (Ooty), Tamil Nadu.",
+            "description": "Description"
+		},
+		{
+			"title": "Nilgiris, Tamil Nadu",
+            "id": 60,
+            "lat": 11.4916,
+            "lng": 76.7337,
+            "city": "Nilgiris, Tamil Nadu.",
+            "description": "Description"
+		},
+		{
+			"title": "Lakkidi (Wayanad), Kerala",
+            "id": 61,
+            "lat": 11.5219,
+            "lng": 76.0247,
+            "city": "Lakkidi (Wayanad), Kerala.",
+            "description": "Description"
+		},
+		{
+			"title": "Chembra, Kerala",
+            "id": 62,
+            "lat": 11.5118,
+            "lng": 76.0887,
+            "city": "Chembra, Kerala.",
+            "description": "Description"
+		},
+		{
+			"title": "Banasura Sagar Dam (Wayanad), Kerala",
+            "id": 63,
+            "lat": 11.6700,
+            "lng": 75.9578,
+            "city": "Banasura Sagar Dam (Wayanad), Kerala.",
+            "description": "Description"
+		},
+		{
+			"title": "Iruppu Waterfalls (Brahmagiri), Karnataka",
+            "id": 64,
+            "lat": 11.9549,
+            "lng": 75.9579,
+            "city": "Iruppu Waterfalls (Brahmagiri), Karnataka.",
+            "description": "Description"
+		},
+		{
+			"title": "Nagarhole National Park And Tiger Reserve, Karnataka",
+            "id": 65,
+            "lat": 12.0314,
+            "lng": 76.1207,
+            "city": "Nagarhole National Park And Tiger Reserve, Karnataka.",
+            "description": "Description"
+		},
+		{
+			"title": "Erode, Tamil Nadu",
+            "id": 66,
+            "lat": 11.3410,
+            "lng": 77.7172,
+            "city": "Erode, Tamil Nadu.",
+            "description": "Description"
+		},
+		{
+			"title": "Vagamon, Kerala",
+            "id": 67,
+            "lat": 9.6862,
+            "lng": 76.9052,
+            "city": "Vagamon, Kerala.",
+            "description": "Description"
+		},
+		{
+			"title": "Tadiandamol, Karnataka",
+            "id": 68,
+            "lat": 12.2171,
+            "lng": 75.6088,
+            "city": "Tadiandamol, Karnataka.",
+            "description": "Description"
+		},
+		{
+			"title": "Dubare Elephant Camp-Resort-Junglelodges, Karnataka",
+            "id": 69,
+            "lat": 12.3706,
+            "lng": 75.9054,
+            "city": "Dubare Elephant Camp-Resort-Junglelodges, Karnataka.",
+            "description": "Description"
+		},
+		{
+			"title": "Mysore Zoo, Karnataka",
+            "id": 70,
+            "lat": 12.3022,
+            "lng": 76.6642,
+            "city": "Mysore Zoo, Karnataka.",
+            "description": "Description"
+		},
+		{
+			"title": "Dolphin's Nose, Coonoor, Tamil Nadu",
+            "id": 71,
+            "lat": 11.3690,
+            "lng": 76.8590,
+            "city": "Dolphin's Nose, Coonoor, Tamil Nadu.",
+            "description": "Description"
+		},
+		{
+			"title": "Yelagiri, Tamil Nadu",
+            "id": 72,
+            "lat": 12.5796,
+            "lng": 78.6399,
+            "city": "Yelagiri, Tamil Nadu.",
+            "description": "Description"
+		},
+		{
+			"title": "Yercaud, Tamil Nadu",
+            "id": 73,
+            "lat": 11.7753,
+            "lng": 78.2093,
+            "city": "Yercaud, Tamil Nadu.",
+            "description": "Description"
+		},
+		{
+			"title": "Vedanthangal Bird Sanctuary, Tamil Nadu",
+            "id": 74,
+            "lat": 12.5455,
+            "lng": 79.8561,
+            "city": "Vedanthangal Bird Sanctuary, Tamil Nadu.",
+            "description": "Description"
+		},
+		{
+			"title": "Madras Crocodile Bank , Tamil Nadu",
+            "id": 75,
+            "lat": 12.7429,
+            "lng": 80.2401,
+            "city": "Madras Crocodile Bank , Tamil Nadu.",
+            "description": "Description"
 		}
 	]
 }
