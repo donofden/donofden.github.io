@@ -175,6 +175,94 @@
             "lng": 54.6501,
             "city": "Airport in Abu Dhabi, United Arab Emirates.",
             "description": "Description"
+		},
+		{
+			"title": "Siliguri, West Bengal.",
+            "id": 23,
+            "lat": 26.7271,
+            "lng": 88.3953,
+            "city": "Airport in Siliguri, West Bengal.",
+            "description": "Description"
+		},
+		{
+			"title": "Gangtok, Sikkim",
+            "id": 24,
+            "lat": 27.3314,
+            "lng": 88.6138,
+            "city": "Gangtok, Sikkim.",
+            "description": "Description"
+		},
+		{
+			"title": "Lachung, Sikkim",
+            "id": 25,
+            "lat": 27.6891,
+            "lng": 88.7430,
+            "city": "Lachung, Sikkim.",
+            "description": "Description"
+		},
+		{
+			"title": "Pelling, Sikkim",
+            "id": 26,
+            "lat": 27.3198,
+            "lng": 88.2400,
+            "city": "Pelling, Sikkim.",
+            "description": "Description"
+		},
+		{
+			"title": "Yumthang, Sikkim",
+            "id": 27,
+            "lat": 27.8268,
+            "lng": 88.6958,
+            "city": "Yumthang, Sikkim",
+            "description": "Description"
+		},
+		{
+			"title": "Nathula, Sikkim",
+            "id": 28,
+            "lat": 27.3866,
+            "lng": 88.8309,
+            "city": "Nathula, Sikkim.",
+            "description": "Description"
+		},
+		{
+			"title": "Namchi, Sikkim",
+            "id": 29,
+            "lat": 27.1670,
+            "lng": 88.3652,
+            "city": "Namchi, Sikkim.",
+            "description": "Description"
+		},
+		{
+			"title": "Gurudongmar Lake, Sikkim",
+            "id": 30,
+            "lat": 28.0258,
+            "lng": 88.7097,
+            "city": "Gurudongmar Lake, Sikkim.",
+            "description": "Description"
+		},
+		{
+			"title": "Tsongmo Lake, Sikkim",
+            "id": 31,
+            "lat": 27.3746,
+            "lng": 88.7632,
+            "city": "Tsongmo Lake, Sikkim.",
+            "description": "Description"
+		},
+		{
+			"title": "Darjeeling, West Bengal",
+            "id": 32,
+            "lat": 27.0410,
+            "lng": 88.2663,
+            "city": "Darjeeling, West Bengal.",
+            "description": "Description"
+		},
+		{
+			"title": "Lachen, Sikkim",
+            "id": 33,
+            "lat": 27.7167,
+            "lng": 88.5577,
+            "city": "Lachen, Sikkim.",
+            "description": "Description"
 		}
 	]
 }
