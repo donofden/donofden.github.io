@@ -9,6 +9,11 @@ description: Golang Useful function/code which I come accross
 
 Here are some of the useful functions/code, I’ve gathered from my personal experiences with dealing Go code.
 
+## Userful Links
+
+[Awesome Go](https://awesome-go.com/#networking){:target="_blank"}
+[Free APIs for mini projects](https://github.com/public-apis/public-apis){:target="_blank"}
+
 ## Convert int8 to bool in golang
 
 ```go
