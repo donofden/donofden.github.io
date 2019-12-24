@@ -128,3 +128,15 @@ Weekend
 ┓┓┓┓┓┃
 
 ```
+
+```
+GW18:
+
+Wanting to                   My desire to
+come top of                  take a -4 hit
+my #FPL mini                 and bring in KDB
+league
+   ( •_•)                            (•_• )
+   ( ง )ง                           ୧( ୧  )
+    /︶\                               /︶\
+```
