@@ -615,6 +615,14 @@
             "lng": 79.4192,
             "city": "Tirupati, Andhra Pradesh.",
             "description": "Description"
+		},
+		{
+			"title": "Chidambaram, Tamil Nadu",
+            "id": 78,
+            "lat": 11.3993,
+            "lng": 79.6935,
+            "city": "Thillai Nataraja Temple, Chidambaram",
+            "description": "Thillai Nataraja Temple, Chidambaram"
 		}
 	]
 }
