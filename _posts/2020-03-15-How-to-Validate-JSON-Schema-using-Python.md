@@ -54,7 +54,7 @@ Given below is a basic JSON schema, which covers a basic user details.
 }
 ```
 
-`jsonschema` is an implementation of [JSON Schema](https://json-schema.org/) for Python. Using `jsonschema`, we can create a schema of our choice, so every time we can validate the JSON document against this schema, if it passed, we could say that the JSON document is valid.
+`jsonschema` is an implementation of [JSON Schema](https://json-schema.org/){:target="_blank"} for Python. Using `jsonschema`, we can create a schema of our choice, so every time we can validate the JSON document against this schema, if it passed, we could say that the JSON document is valid.
 
 Keyword | Description |
 --- | --- |
@@ -73,7 +73,7 @@ maxLength | The length of a string instance is defined as the maximum number of 
 minLength | The length of a string instance is defined as the minimum number of its characters. |
 pattern | A string instance is considered valid if the regular expression matches the instance successfully. |
 
-You can check a [http://json-schema.org](http://json-schema.org) for the complete list of keywords that can be used in defining a JSON schema. The above schema can be used to test the validity of the following JSON code 
+You can check a [http://json-schema.org](http://json-schema.org){:target="_blank"} for the complete list of keywords that can be used in defining a JSON schema. The above schema can be used to test the validity of the following JSON code 
 
 First, install `jsonschema` using pip command.
 
@@ -152,12 +152,12 @@ Given JSON data is InValid
 
 ### Reference:
 
-- https://json-schema.org/
-- https://pynative.com/python-json-validation/
-- https://www.tutorialspoint.com/json/json_schema.htm
-- https://github.com/Julian/jsonschema
+- [https://json-schema.org/](https://json-schema.org/){:target="_blank"}
+- [https://pynative.com/python-json-validation/](https://pynative.com/python-json-validation/){:target="_blank"}
+- [https://www.tutorialspoint.com/json/json_schema.htm](https://www.tutorialspoint.com/json/json_schema.htm){:target="_blank"}
+- [https://github.com/Julian/jsonschema](https://github.com/Julian/jsonschema){:target="_blank"}
 
 ----------------------
 Please refer [python-validate-json-schema](https://github.com/donofden/python-validate-json-schema){:target="_blank"} one of my project where I learnt how to implement the above.
 
-Share your thoughts via twitter @aravind_kumar_g ``¯\_(ツ)_/¯``
+Share your thoughts via twitter [@aravind_kumar_g](https://twitter.com/aravind_kumar_g){:target="_blank"} ``¯\_(ツ)_/¯``
