@@ -33,7 +33,6 @@ Let's start writing our lambda, I always prefer multiple functions/chunks of cod
 Let's create a file `lambda_api.py` and write our lambda functions.
 
 ```python
-
 import boto3
 import os
 import json
@@ -82,7 +81,7 @@ class DbEntity:
 
 ```python
 class ResultEntity:
-        def __init__(self, RecordId, Status, Notes=None):
+    def __init__(self, RecordId, Status, Notes=None):
         """
         This function used to initiate values to the class variables
         """
@@ -111,9 +110,9 @@ def get_record_status(item):
     base_instance_item = table.get_item(
         Key={
             'RecordId': item.RecordId,
-            'RowType': item.RowType
+            'RecordType': item.RecordType
         },
-        ProjectionExpression='RecordId, RowType, #s',
+        ProjectionExpression='RecordId, Notes, #s',
         ExpressionAttributeNames={
             "#s": "Status"
         },
@@ -224,7 +223,7 @@ import json
 from moto import mock_dynamodb2
 from lambda_api import lambda_handler
 
-TXNS_TABLE = "test-lambda-table-for-blog"
+TXNS_TABLE = "lambda-table-for-blog"
 
 
 @pytest.fixture
@@ -281,7 +280,7 @@ def test_handler_for_status_ok(use_moto):
         Item={
             'RecordId': "DonOfDen002",
             'RecordType': "global",
-            'Status': "EXECUTION COMPLETED",
+            'Status': "OK",
             'Notes': "DonOfDen Test Blog! - Unittest"
         }
     )
@@ -291,7 +290,6 @@ def test_handler_for_status_ok(use_moto):
     }
 
     return_data = lambda_handler(event, "")
-
     body = json.loads(return_data['body'])
 
     assert return_data['statusCode'] == 200
@@ -318,7 +316,6 @@ def test_handler_for_different_status(use_moto):
     }
 
     return_data = lambda_handler(event, "")
-
     body = json.loads(return_data['body'])
 
     assert return_data['statusCode'] == 200
