@@ -404,7 +404,7 @@ def dynamo_db_fixture():
     resource = boto3.resource("dynamodb", region_name='eu-west-2')
 
     # Create the table
-    dynamodb.create_table(
+    resource.create_table(
         TableName=TXNS_TABLE,
         KeySchema=[
             {
