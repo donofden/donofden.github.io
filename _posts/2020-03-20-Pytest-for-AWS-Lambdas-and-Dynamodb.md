@@ -383,9 +383,9 @@ We are calling `lambda_handler(event, "")` along with the `json` format event. I
 
 Finally, we assert the response to seeing our lambda behaves as expected. I believe the rest of the tests are self-explanatory.
 
-## Using @pytest.yeald_fixture
+## Using @pytest.yield_fixture
 
-The above test can also be written with `@pytest.yeald_fixture`, which will be a lot neater and it includes scope for the dynamodb resource.
+The above test can also be written with `@pytest.yield_fixture`, which will be a lot neater and it includes scope for the dynamodb resource.
 
 ```python
 import boto3
@@ -490,6 +490,8 @@ def test_handler_for_different_status(dynamo_db_fixture):
     assert body['Status'] == 'DRAFT'
     assert 'Notes' not in body
 ```
+
+Here with `@pytest.yield_fixture` we are creating a dynamodb resource and client which will yield for all test using `fixture`. Which again used `mock_dynamodb2()` with `start()` and `stop()` to define the resource usage.
 
 Ref: [Issue with Moto and creating pytest fixture](https://github.com/spulec/moto/issues/620) for more details.
 
