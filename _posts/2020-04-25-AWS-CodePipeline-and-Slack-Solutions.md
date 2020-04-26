@@ -4,7 +4,7 @@ title: "AWS CodePipeline and Slack Solutions"
 date: 2020-04-25
 author: DonOfDen
 tags: [AWS, Amazon, CodePipeline, Slack, Integration, Automation, AWS Lambda, SNS Topic, CloudWatch]
-description: How to use Pytest for AWS Lambdas and Dynamodb.
+description: Do you want to get a notification about the deployment progress in your slack channel?
 ---
 
 # AWS CodePipeline and Slack Solutions
@@ -176,3 +176,9 @@ We are all done. Whenever this pipeline fails our CloudWatch Events will capture
 - Convert the manual step to `CDK Deploy`, So we can reduce all the manual steps to add this awesome automation.
 
 - Drive the `CDK Deployment` from `config.json` another `AWS CDK` menthod.
+
+git config --global url."https://github.com/".insteadOf "https://github.com/"
+
+git config --global url.https://github.com/.insteadOf git://github.com/
+
+git config --global url."https://github.com/".insteadOf "https://$GITHUB_TOKEN@github.com/"
