@@ -176,9 +176,3 @@ We are all done. Whenever this pipeline fails our CloudWatch Events will capture
 - Convert the manual step to `CDK Deploy`, So we can reduce all the manual steps to add this awesome automation.
 
 - Drive the `CDK Deployment` from `config.json` another `AWS CDK` menthod.
-
-git config --global url."https://github.com/".insteadOf "https://github.com/"
-
-git config --global url.https://github.com/.insteadOf git://github.com/
-
-git config --global url."https://github.com/".insteadOf "https://$GITHUB_TOKEN@github.com/"
