@@ -122,7 +122,7 @@ requests = "^2.23.0"
 project-model = {git = "https://github.com/donofden/project-model.git", rev = "master"}
 ```
 
-where `project-model` is my provate repo.
+where `project-model` is my private repo.
 
 [For more information of the commands check official website for details.](https://python-poetry.org/docs/cli/)
 
