@@ -255,9 +255,9 @@ Make sure you ahve installed the following packages:
 
 This will start the server at port 5003. You can access the Swagger UI on http://localhost:5003/docs
 
-![Swagger UI](/images/doc/swagger-blog-1.png)
+![blog-head-image](/images/doc/swagger-blog-1.png)
 
-![Swagger UI](/images/doc/swagger-blog-2.png)
+![blog-head-image](/images/doc/swagger-blog-2.png)
 
 `Try out` by posting some values to the Endpoint.
 
