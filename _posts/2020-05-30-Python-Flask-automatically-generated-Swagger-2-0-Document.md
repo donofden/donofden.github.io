@@ -92,7 +92,6 @@ response_fields = api.model('Resource', {
 # This class will handle POST
 @api.route('/demo/', endpoint='demo')
 @api.doc(responses={403: 'Not Authorized'})
-@api.doc(responses={402: 'Not Authorized'})
 class DemoList(Resource):
     @api.expect(response_fields, validate=True)
     @api.marshal_with(response_fields, code=200)
