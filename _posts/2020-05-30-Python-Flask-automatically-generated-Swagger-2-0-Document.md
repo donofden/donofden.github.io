@@ -260,5 +260,75 @@ This will start the server at port 5003. You can access the Swagger UI on http:/
 
 `Try out` by posting some values to the Endpoint.
 
+To get `Yaml` documentation, click `Try out` from `Swagger UI` doc or hit `http://localhost:5003/swagger`, this will generate a `yamldoc.yml` file.
+
+![blog-head-image](/images/doc/swagger-blog-3.png)
+
+```yaml
+basePath: /
+consumes:
+- application/json
+definitions:
+  Resource:
+    properties:
+      value:
+        description: example text
+        maxLength: 200
+        minLength: 1
+        type: string
+    required:
+    - value
+    type: object
+info:
+  description: TEST APP API
+  title: TEST APP API
+  version: 1.0.0
+paths:
+  /demo/:
+    post:
+      operationId: post_demo_list
+      parameters:
+      - in: body
+        name: payload
+        required: true
+        schema:
+          $ref: '#/definitions/Resource'
+      - description: An optional fields mask
+        format: mask
+        in: header
+        name: X-Fields
+        type: string
+      responses:
+        '200':
+          description: Success
+          schema:
+            $ref: '#/definitions/Resource'
+        '402':
+          description: Not Authorized
+        '403':
+          description: Not Authorized
+      tags:
+      - default
+  /swagger:
+    get:
+      operationId: get_hello_swagger
+      responses:
+        '200':
+          description: Success
+      tags:
+      - default
+produces:
+- application/json
+responses:
+  MaskError:
+    description: When any error occurs on mask
+  ParseError:
+    description: When a mask can't be parsed
+swagger: '2.0'
+tags:
+- description: Default namespace
+  name: default
+```
+
 ----------------------
 Share your thoughts via twitter [`@aravind_kumar_g`](https://twitter.com/aravind_kumar_g) ``¯\_(ツ)_/¯``
