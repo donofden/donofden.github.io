@@ -212,6 +212,8 @@ See how we can creating and storing encrypted secrets in github, so it can be us
 
 Installing `poetry` and running `pytest` are straing forward.
 
+Complete `pullrequestchecks.yml` file.
+
 ```yaml
 # Checks that we can build and validate the Unittest
 name: Pull-Request-Checks
