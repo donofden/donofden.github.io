@@ -6,117 +6,137 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
   <loc>http://donofden.com/</loc>
-  <lastmod>2020-03-21T14:09:39+00:00</lastmod>
+  <lastmod>2020-05-30T18:18:51+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>http://donofden.com/travels/</loc>
-  <lastmod>2020-03-21T14:09:39+00:00</lastmod>
+  <lastmod>2020-05-30T18:18:51+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>http://donofden.com/blog/</loc>
-  <lastmod>2020-03-21T14:09:39+00:00</lastmod>
+  <lastmod>2020-05-30T18:18:51+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>http://donofden.com/gallery/</loc>
-  <lastmod>2020-03-21T14:09:39+00:00</lastmod>
+  <lastmod>2020-05-30T18:18:51+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>http://donofden.com/index.html</loc>
-  <lastmod>2020-03-21T14:09:39+00:00</lastmod>
+  <lastmod>2020-05-30T18:18:51+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
+  <loc>http://donofden.com/blog/2020/05/30/Python-Flask-automatically-generated-Swagger-2-0-Document</loc>
+  <lastmod>2020-05-30T18:18:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://donofden.com/blog/2020/05/15/CI-CD-with-GitHub-Actions-with-poetry</loc>
+  <lastmod>2020-05-30T18:18:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://donofden.com/blog/2020/04/26/python-unittest-datetime</loc>
+  <lastmod>2020-05-30T18:18:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://donofden.com/blog/2020/04/25/AWS-CodePipeline-and-Slack-Solutions</loc>
+  <lastmod>2020-05-30T18:18:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
   <loc>http://donofden.com/blog/2020/03/20/Pytest-for-AWS-Lambdas-and-Dynamodb</loc>
-  <lastmod>2020-03-21T14:09:39+00:00</lastmod>
+  <lastmod>2020-05-30T18:18:51+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://donofden.com/blog/2020/03/15/How-to-Validate-JSON-Schema-using-Python</loc>
-  <lastmod>2020-03-21T14:09:39+00:00</lastmod>
+  <lastmod>2020-05-30T18:18:51+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://donofden.com/blog/2020/02/13/testing-python-input-print-and-exclude-main-function-from-coverage</loc>
-  <lastmod>2020-03-21T14:09:39+00:00</lastmod>
+  <lastmod>2020-05-30T18:18:51+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://donofden.com/blog/2019/11/20/Makefile</loc>
-  <lastmod>2020-03-21T14:09:39+00:00</lastmod>
+  <lastmod>2020-05-30T18:18:51+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://donofden.com/blog/2019/11/07/twitter-text-art</loc>
-  <lastmod>2020-03-21T14:09:39+00:00</lastmod>
+  <lastmod>2020-05-30T18:18:51+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://donofden.com/blog/2019/10/11/css-useful-collections</loc>
-  <lastmod>2020-03-21T14:09:39+00:00</lastmod>
+  <lastmod>2020-05-30T18:18:51+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://donofden.com/blog/2019/09/20/golang-interface-goroutine-channels</loc>
-  <lastmod>2020-03-21T14:09:39+00:00</lastmod>
+  <lastmod>2020-05-30T18:18:51+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://donofden.com/blog/2019/09/20/golang-array-slice-map</loc>
-  <lastmod>2020-03-21T14:09:39+00:00</lastmod>
+  <lastmod>2020-05-30T18:18:51+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://donofden.com/blog/2019/09/20/golang-structs-pointers</loc>
-  <lastmod>2020-03-21T14:09:39+00:00</lastmod>
+  <lastmod>2020-05-30T18:18:51+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://donofden.com/blog/2019/09/11/golang-useful-functions-code</loc>
-  <lastmod>2020-03-21T14:09:39+00:00</lastmod>
+  <lastmod>2020-05-30T18:18:51+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://donofden.com/blog/2019/09/05/How-to-force-github-pages-build</loc>
-  <lastmod>2020-03-21T14:09:39+00:00</lastmod>
+  <lastmod>2020-05-30T18:18:51+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://donofden.com/blog/2019/08/24/How-to-get-google-app-client-id-and-client-Secret</loc>
-  <lastmod>2020-03-21T14:09:39+00:00</lastmod>
+  <lastmod>2020-05-30T18:18:51+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://donofden.com/blog/2019/08/20/scrum-master-burndown-automation</loc>
-  <lastmod>2020-03-21T14:09:39+00:00</lastmod>
+  <lastmod>2020-05-30T18:18:51+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://donofden.com/blog/2018/01/25/The-worthy-Rs10-i-spent-the-whole-year</loc>
-  <lastmod>2020-03-21T14:09:39+00:00</lastmod>
+  <lastmod>2020-05-30T18:18:51+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://donofden.com/blog/2017/12/02/kashmir-trip</loc>
-  <lastmod>2020-03-21T14:09:39+00:00</lastmod>
+  <lastmod>2020-05-30T18:18:51+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://donofden.com/collections/css-ribbon.html</loc>
-  <lastmod>2020-03-21T14:09:33+00:00</lastmod>
+  <lastmod>2020-05-30T18:18:45+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>http://donofden.com/collections/css-emoji.html</loc>
-  <lastmod>2020-03-21T14:09:33+00:00</lastmod>
+  <lastmod>2020-05-30T18:18:45+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>http://donofden.com/collections/css-cute-kiss.html</loc>
-  <lastmod>2020-03-21T14:09:33+00:00</lastmod>
+  <lastmod>2020-05-30T18:18:45+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 </urlset>
