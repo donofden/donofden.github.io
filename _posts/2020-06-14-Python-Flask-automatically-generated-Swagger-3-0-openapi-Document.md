@@ -11,7 +11,7 @@ description: Python Flask automatically generated Swagger 3.0/Openapi Document
 
 This article is the second part of [`Python Flask automatically generated Swagger 2.0 Document`](http://donofden.com/blog/2020/05/30/Python-Flask-automatically-generated-Swagger-2-0-Document), in this article we are going to generate `Swagger 3.0/Openapi Document`.
 
-In the wild, they are many good examples of well-documented APIs... Take the Twitter API : the docs are great, user-friendly and cover all the available endpoint with tips and examples. Any fresh CS student could write a small Python tool using it, just by following the documentation and its examples.
+In the wild, they are many good examples of well-documented APIs. Take the Twitter API: the docs are great, user-friendly and cover all the available endpoint with tips and examples. Any fresh CS student could write a small Python tool using it, just by following the documentation and its examples.
 
 we decided to follow the OpenAPI (aka Swagger 3.0) specification to build a solid documentation for our Flask-powered micro-services APIs. Let's dive in.
 
@@ -170,78 +170,84 @@ You will end up with a valid JSON API specification.
 
 ```json
 {
-	"info": {
-		"description": "Demo API",
-		"version": "1.0.0-oas3",
-		"contact": {
-			"email": "admin@donofden.com"
-		},
-		"license": {
-			"name": "Apache 2.0",
-			"url": "http://www.apache.org/licenses/LICENSE-2.0.html"
-		},
-		"title": "Demo API"
-	},
-	"servers": [{
-		"description": "Test server",
-		"url": "https://resources.donofden.com"
-	}],
-	"tags": [{
-		"name": "Demo",
-		"description": "Endpoints related to Demo"
-	}],
-	"paths": {
-		"/demo/{gist_id}": {
-			"get": {
-				"parameters": [{
-					"in": "path",
-					"name": "gist_id",
-					"required": true,
-					"schema": {
-						"type": "integer",
-						"format": "int32"
-					}
-				}],
-				"responses": {
-					"200": {
-						"content": {
-							"application/json": {
-								"schema": {
-									"$ref": "#/components/schemas/Demo"
-								}
-							}
-						}
-					},
-					"201": {
-						"content": {
-							"application/json": {
-								"schema": {
-									"$ref": "#/components/schemas/Demo"
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-	},
-	"openapi": "3.0.2",
-	"components": {
-		"schemas": {
-			"Demo": {
-				"type": "object",
-				"properties": {
-					"id": {
-						"type": "integer",
-						"format": "int32"
-					},
-					"content": {
-						"type": "string"
-					}
-				}
-			}
-		}
-	}
+  "info": {
+    "description": "Demo API",
+    "version": "1.0.0-oas3",
+    "contact": {
+      "email": "admin@donofden.com"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    },
+    "title": "Demo API"
+  },
+  "servers": [
+    {
+      "description": "Test server",
+      "url": "https://resources.donofden.com"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Demo",
+      "description": "Endpoints related to Demo"
+    }
+  ],
+  "paths": {
+    "/demo/{gist_id}": {
+      "get": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "gist_id",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Demo"
+                }
+              }
+            }
+          },
+          "201": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Demo"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "openapi": "3.0.2",
+  "components": {
+    "schemas": {
+      "Demo": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "content": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
 }
 ```
 

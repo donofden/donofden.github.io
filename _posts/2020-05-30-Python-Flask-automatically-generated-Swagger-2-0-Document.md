@@ -7,6 +7,8 @@ tags: [python, flask, swagger, document]
 description: Python Flask automatically generated Swagger 2.0 Document
 ---
 
+**NOTE:** If your looking for `Swagger 3.0/openapi` documentation and endup here, feel free to check my other post where I have explained about [`Python Flask automatically generated Swagger 3.0/Openapi Document`](http://donofden.com/blog/2020/06/14/Python-Flask-automatically-generated-Swagger-3-0-openapi-Document)
+
 ## Python Flask automatically generated Swagger 2.0 Document
 
 This article will describe how to get started with the python flask, so we can write API spec document. We’ll leave out application specific aspects like authentication and database access and will focus on the basics. As an example, we’ll build a simple REST-ful API.
