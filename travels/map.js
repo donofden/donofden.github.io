@@ -161,15 +161,6 @@ google.maps.event.addDomListener(window, 'load', initMap);
 
 function setMarker(map) {
 
-    var beaches = [
-        ['Bondi Beach', -33.890542, 151.274856, 4],
-        ['Coogee Beach', -33.923036, 151.259052, 5],
-        ['Cronulla Beach', -34.028249, 151.157507, 3],
-        ['Manly Beach', -33.80010128657071, 151.28747820854187, 2],
-        ['Maroubra Beach', -33.950198, 151.259302, 1]
-    ];
-
-    var location = new google.maps.LatLng(53.3811, -1.4701);
     // Marker Icon
     var image = {
         url: './marker/icon_16X16.png',
@@ -209,7 +200,7 @@ function setMarker(map) {
                 var contentString = '<div class="info-window">' +
                     '<h3>' + location['title'] + '</h3>' +
                     '<div class="info-content">' +
-                    '<p>' + location['city'] + ' Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>' +
+                    '<p>' + location['city'] + '.</p>' +
                     '</div>' +
                     '</div>';
 
