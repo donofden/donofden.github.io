@@ -623,6 +623,94 @@
             "lng": 79.6935,
             "city": "Thillai Nataraja Temple, Chidambaram",
             "description": "Thillai Nataraja Temple, Chidambaram"
+		},
+		{
+			"title": "Valparai, Tamil Nadu",
+            "id": 79,
+            "lat": 10.314060719777961,
+            "lng": 76.85756187250628,
+            "city": "Sheikalmudi Bungalows by Tahr Trails, Valpari",
+            "description": "Sheikalmudi Bungalows by Tahr Trails, Valpari"
+		},
+		{
+			"title": "Kodaikanal, Tamil Nadu",
+            "id": 80,
+            "lat": 10.2381,
+            "lng": 77.4892,
+            "city": "Kodaikanal, Tamil Nadu",
+            "description": "Kodaikanal, Tamil Nadu"
+		},
+		{
+			"title": "Ambasamudram, Tamil Nadu",
+            "id": 81,
+            "lat": 8.7093,
+            "lng": 77.4530,
+            "city": "Ambasamudram, Tamil Nadu",
+            "description": "Ambasamudram, Tamil Nadu"
+		},
+		{
+			"title": "Tirunelveli, Tamil Nadu",
+            "id": 82,
+            "lat": 8.7139,
+            "lng": 77.7567,
+            "city": "Tirunelveli, Tamil Nadu",
+            "description": "Tirunelveli, Tamil Nadu"
+		},
+		{
+			"title": "Kanyakumari, Tamil Nadu",
+            "id": 83,
+            "lat": 8.0883,
+            "lng": 77.5385,
+            "city": "Kanyakumari, Tamil Nadu",
+            "description": "Kanyakumari, Tamil Nadu"
+		},
+		{
+			"title": "Courtallam, Tamil Nadu",
+            "id": 84,
+            "lat": 8.9341,
+            "lng": 77.2779,
+            "city": "Courtallam, Tamil Nadu",
+            "description": "Courtallam, Tamil Nadu"
+		},
+		{
+			"title": "Papanasam, Tamil Nadu",
+            "id": 85,
+            "lat": 8.7137,
+            "lng": 77.3672,
+            "city": "Papanasam, Tamil Nadu",
+            "description": "Papanasam, Tamil Nadu"
+		},
+		{
+			"title": "Madurai, Tamil Nadu",
+            "id": 86,
+            "lat": 9.9252,
+            "lng": 78.1198,
+            "city": "Madurai, Tamil Nadu",
+            "description": "Madurai, Tamil Nadu"
+		},
+		{
+			"title": "Bhadravathi, Karnataka",
+            "id": 87,
+            "lat": 13.8276,
+            "lng": 75.7064,
+            "city": "Bhadravathi, Karnataka",
+            "description": "Bhadravathi, Karnataka"
+		},
+		{
+			"title": "Jog Falls, Karnataka",
+            "id": 88,
+            "lat": 14.2004,
+            "lng": 74.7922,
+            "city": "Jog Falls, Karnataka",
+            "description": "Jog Falls, Karnataka"
+		},
+		{
+			"title": "Puducherry / Pondicherry, Tamil Nadu",
+            "id": 89,
+            "lat": 11.9416,
+            "lng": 79.8083,
+            "city": "Puducherry / Pondicherry, Tamil Nadu",
+            "description": "Puducherry / Pondicherry, Tamil Nadu"
 		}
 	]
 }
