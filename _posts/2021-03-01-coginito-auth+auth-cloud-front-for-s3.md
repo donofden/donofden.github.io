@@ -30,7 +30,7 @@ Let’s suppose we have an S3 static web application which we want to provide ac
 
 A potential solution is to add Cognito based login for authenticate and CloudFront to authorize the user to access the website. i.e. Cognito will validate the user and provide a JWT token, with which we will request to a CloudFront Belaviour and Lambda@edge will validate our JWT token and generate signed cookies then redirect with S3 bucket.
 
-Following are the AWS service used to achive the above solution. Its a long trip! but worth it!
+Following are the AWS service used to achieve the above solution. Its a long trip! but worth it!
 
 - Cognito
 - CloudFront
@@ -39,7 +39,7 @@ Following are the AWS service used to achive the above solution. Its a long trip
 - Lambda@Edge
 - Secret Manager
 
-Along with a simple JS script and a Python Script for Lambda@Edge which we developed using chalice.
+Along with a simple JS script and Python Script for Lambda@Edge which we developed using chalice.
 
 Ok, Lets go step by step.
 
@@ -150,7 +150,7 @@ Identity pool gives AWS resource access after it verifies the token provided to 
 
 # Creating an S3 Bucket for Public and Private Access
 
-Lets Create 2 Buckets one for Public Access and the Second for Private Content.
+Lets Create 2 Buckets one for Public Access the Second for Private Content.
 
 1. Go to AWS S3 page and click “Create bucket”.
 2. Enter a “Bucket name” and click “Next”.
@@ -283,17 +283,17 @@ Refer the following image and copy the `Doman Name` of the Distribution and try 
 
 ![blog-head-image](/images/doc/20-cognito.png)
 
-- You will be redirect to defailt page, `index.html` field in `Public S3 Bucket`,
+- You will be re-direct to default page, `index.html` field in `Public S3 Bucket`,
 
 - It will check for `JWT` token in the URL, else redirect to `Cognito`
 
-- Once succesful login, cognito will redirect to `index.html` in `Public S3 Bucket`
+- Once successful login, cognito will redirect to `index.html` in `Public S3 Bucket`
 
 - If the URl has `idtoken`, The `JS` present in the `index.html` file will redirect the user to `private/login`.
 
 - The Lambda@Edge associated with the `Behaviour` will validate the `JWT` token with `Private Key` and `JWKS` key.
 
-- Upon Succesful validation, The Lambda@Edge code will attach `Signed Cookies` and redirect to `private/app/index.html`.
+- Upon successful validation, The Lambda@Edge code will attach `Signed Cookies` and redirect to `private/app/index.html`.
 
 - The redirection will pass via `CloudFront` the CF will check the signed cookies and authorise the user to access the `Private S3 Bucket`.
 
