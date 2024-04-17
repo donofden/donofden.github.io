@@ -156,6 +156,7 @@ Given JSON data is InValid
 - [https://pynative.com/python-json-validation/](https://pynative.com/python-json-validation/){:target="_blank"}
 - [https://www.tutorialspoint.com/json/json_schema.htm](https://www.tutorialspoint.com/json/json_schema.htm){:target="_blank"}
 - [https://github.com/Julian/jsonschema](https://github.com/Julian/jsonschema){:target="_blank"}
+- [https://extendsclass.com/json-schema-validator.html](https://extendsclass.com/json-schema-validator.html){:target="_blank"}
 
 ----------------------
 Please refer [python-validate-json-schema](https://github.com/donofden/python-validate-json-schema){:target="_blank"} one of my project where I learnt how to implement the above.
