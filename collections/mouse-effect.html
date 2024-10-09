@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Mouse Effect with Colored Particles JavaScript</title>
+   <style>
+       /* Full-screen canvas */
+       body, html {
+           margin: 0;
+           overflow: hidden;
+       }
+       canvas {
+           display: block;
+           background-color: #008;
+       }
+   </style>
+</head>
+<body>
+   <canvas id="particleCanvas"></canvas>
+   <script>
+       // Set up canvas and context
+       const canvas = document.getElementById('particleCanvas');
+       const ctx = canvas.getContext('2d');
+       canvas.width = window.innerWidth;
+       canvas.height = window.innerHeight;
+
+       // Particle array to store all particles
+       const particlesArray = [];
+
+       // Function to create a particle object
+       function createParticle(x, y) {
+           const size = Math.random() * 3 + 1; // Random size between 1 and 4
+           const speedX = (Math.random() - 0.5) * 3; // Horizontal speed
+           const speedY = (Math.random() - 0.5) * 3; // Vertical speed
+           const color = `hsl(${Math.random() * 360}, 100%, 50%)`; // Random color
+           return { x, y, size, speedX, speedY, color };
+       }
+
+       // Function to add particles based on mouse movement
+       function handleMouse(event) {
+           // Add particles at mouse position
+           for (let i = 0; i < 5; i++) {
+               particlesArray.push(createParticle(event.clientX, event.clientY));
+           }
+       }
+
+       // Update particle positions and draw them
+       function updateParticles() {
+           ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear canvas
+           for (let i = 0; i < particlesArray.length; i++) {
+               const p = particlesArray[i];
+               p.x += p.speedX; // Update X position
+               p.y += p.speedY; // Update Y position
+               p.size *= 0.97; // Gradually shrink the particle
+
+               // Draw particle
+               ctx.fillStyle = p.color;
+               ctx.beginPath();
+               ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+               ctx.fill();
+
+               // Remove small particles
+               if (p.size < 0.3) {
+                   particlesArray.splice(i, 1);
+                   i--;
+               }
+           }
+       }
+
+       // Animation loop
+       function animate() {
+           updateParticles();
+           requestAnimationFrame(animate);
+       }
+
+       // Listen for mouse movement
+       window.addEventListener('mousemove', handleMouse);
+
+       // Start animation
+       animate();
+   </script>
+</body>
+</html>
