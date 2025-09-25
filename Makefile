@@ -19,7 +19,7 @@ start: ## Start the application - http://localhost:4000/
 	bundle exec jekyll serve
 
 .PHONY: install
-install: ## instell plugins from Gemfile
+install: ## install plugins from Gemfile
 	sudo gem install jekyll bundler
 	sudo bundle install
 
