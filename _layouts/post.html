@@ -8,7 +8,14 @@ layout: default
     <p class="lead"><i class="fa fa-user"></i> by <a href="">{{ page.author }}</a>
     </p>
     <hr>
-    <p><i class="fa fa-calendar"></i> Posted on {{ page.date | date_to_string }}</p>
+    <p>
+        <i class="fa fa-calendar"></i> Posted on {{ page.date | date_to_string }}
+        &nbsp;&mdash;&nbsp;
+        {% assign words = content | number_of_words %}
+        {% assign minutes = words | divided_by: 200 %}
+        {% if minutes < 1 %}{% assign minutes = 1 %}{% endif %}
+        <i class="fa fa-clock-o"></i> {{ minutes }} min read
+    </p>
     <p><i class="fa fa-tags"></i> Tags: 
       {% for tag in page.tags %}
       <a href="#{{ tag | slugify }}">

@@ -1,0 +1,15 @@
+services:
+  jekyll:
+    image: jekyll/jekyll:4.2.2
+    command: jekyll serve --livereload --incremental --force_polling
+    ports:
+      - "4000:4000"
+      - "35729:35729"   # livereload port
+    volumes:
+      - .:/srv/jekyll:Z
+      - jekyll_bundle:/usr/local/bundle  # cache gems between runs
+    environment:
+      - JEKYLL_ENV=development
+
+volumes:
+  jekyll_bundle:

@@ -1,0 +1,21 @@
+name: Release Drafter
+
+# Automatically drafts release notes as PRs are merged into main.
+# Runs only on push to main so the config file is guaranteed to be present
+# on the default branch. When ready to deploy, publish the draft release.
+on:
+  push:
+    branches: [main]
+
+jobs:
+  update_release_draft:
+    name: Update release draft
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Draft release notes
+        uses: release-drafter/release-drafter@67e173cadb2fbd3de94f4a861e0c48c913b462ae # v6
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
