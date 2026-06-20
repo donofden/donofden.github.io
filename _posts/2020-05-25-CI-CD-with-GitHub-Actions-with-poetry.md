@@ -150,6 +150,7 @@ Now, to use `GitHub Actions`, we need to create workflows that are going to be e
 
 `pullrequestchecks.yml` will contain a jobs which will be triggered on every push to the repository, let's look at it:
 
+{% raw %}
 ```yaml
 # Checks that we can build and validate the Unittest
 name: Pull-Request-Checks
@@ -184,6 +185,7 @@ jobs:
           restore-keys: |
             poetry-${{ hashFiles('**/poetry.lock') }}
 ```
+{% endraw %}
 
 The job runs it though, it first checks out our repository by executing action called `checkout` which is published on GitHub. 
 
@@ -214,6 +216,7 @@ Installing `poetry` and running `pytest` are straing forward.
 
 Complete `pullrequestchecks.yml` file.
 
+{% raw %}
 ```yaml
 # Checks that we can build and validate the Unittest
 name: Pull-Request-Checks
@@ -262,6 +265,7 @@ jobs:
       - name: Generate XML Report
         run: PYTHONPATH=src/ poetry run python -m coverage xml
 ```
+{% endraw %}
 
 That's it! We have created a GitHub action, Once u pushed this code to your repo. When ever a `Pull Request` is created for the repo, A `Github` action will be triggered and which will run `pytest` against the `checkout` branch and submit the report. We then can verify the test output and `coverage` during PR review.
 

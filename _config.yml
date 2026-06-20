@@ -1,4 +1,6 @@
 name: Aravind Kumar, DonOfDen
+title: Aravind Kumar G | DonOfDen
+repository: donofden/donofden.github.io
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
 style: light
