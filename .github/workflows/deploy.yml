@@ -1,10 +1,19 @@
 name: Build & Deploy to GitHub Pages
 
-# Deploys ONLY when a release is published.
-# Only the repository owner can publish releases, so this acts as a natural gate.
+# - Auto-deploys on every push to main (i.e. merged PR).
+# - Manual trigger: Actions tab → "Run workflow" → optionally enter a tag/branch
+#   to build from (e.g. v1.1.1). The workflow always runs from main so the
+#   github-pages environment protection rules are satisfied.
 on:
-  release:
-    types: [published]
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: 'Branch or tag to build and deploy (default: main)'
+        required: false
+        default: 'main'
 
 # Ensure only one deployment runs at a time
 concurrency:
@@ -20,6 +29,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+        with:
+          ref: ${{ inputs.ref || 'main' }}
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@9eb537ca036ebaed86729dcb9309076e4c5c3b74 # v1
@@ -28,6 +39,7 @@ jobs:
           bundler-cache: true
 
       - name: Configure GitHub Pages
+        id: pages
         uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5
 
       - name: Build with Jekyll
