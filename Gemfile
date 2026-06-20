@@ -7,5 +7,8 @@ gem 'github-pages', '232', group: :jekyll_plugins
 # Required for Ruby 3.x compatibility with Jekyll 3.x
 gem 'webrick', '~> 1.8'
 
+# Required for jekyll-github-metadata with Faraday v2.0+
+gem 'faraday-retry'
+
 # jekyll-octicons has no stable RubyGems release; excluded from local dev.
 # GitHub Pages handles it server-side via the github-pages gem.
