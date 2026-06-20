@@ -1,0 +1,36 @@
+# Auto-label rules for pull requests based on changed files.
+# Labels must exist in the repository before they can be applied.
+
+content:
+  - changed-files:
+    - any-glob-to-any-file: '_posts/**'
+    - any-glob-to-any-file: 'blog/**'
+
+styles:
+  - changed-files:
+    - any-glob-to-any-file: 'css/**'
+    - any-glob-to-any-file: 'sass/**'
+
+config:
+  - changed-files:
+    - any-glob-to-any-file: '_config.yml'
+    - any-glob-to-any-file: 'Gemfile'
+    - any-glob-to-any-file: 'Gemfile.lock'
+
+documentation:
+  - changed-files:
+    - any-glob-to-any-file: '*.md'
+    - any-glob-to-any-file: '**/*.md'
+
+github-actions:
+  - changed-files:
+    - any-glob-to-any-file: '.github/**'
+
+javascript:
+  - changed-files:
+    - any-glob-to-any-file: 'js/**'
+
+images:
+  - changed-files:
+    - any-glob-to-any-file: 'images/**'
+    - any-glob-to-any-file: 'gallery/**'

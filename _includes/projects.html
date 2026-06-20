@@ -10,7 +10,7 @@
                     {% else %}
                         {% assign sort_order = 'pushed_at' %}
                     {% endif %}
-                    
+
                     {% if site.projects.exclude.archived && site.projects.exclude.forks %}
                         {% assign filtered_repos = site.github.public_repositories | where:'archived', false | where:'fork', false | sort: sort_order | reverse %}
                     {% elsif site.projects.exclude.archived %}
@@ -20,12 +20,20 @@
                     {% else %}
                         {% assign filtered_repos = site.github.public_repositories | sort: sort_order | reverse %}
                     {% endif %}
-                    
-                    {% for repository in filtered_repos | limit: 99 %}
+
+                    {% for repository in filtered_repos %}
                         {% unless site.projects.exclude.projects contains repository.name %}
+                        {% if site.projects.show %}
+                            {% if site.projects.show contains repository.name %}
+                            <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3 box-part">
+                                {% include repo-card.html %}
+                            </div>
+                            {% endif %}
+                        {% else %}
                         <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3 box-part">
                             {% include repo-card.html %}
                         </div>
+                        {% endif %}
                         {% endunless %}
                     {% endfor %}
                     </div>

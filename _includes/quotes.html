@@ -1,0 +1,22 @@
+<section class="colorlib-quotes" data-section="quotes">
+    <div class="colorlib-narrow-content">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+                <span class="heading-meta">Inspiration</span>
+                <h2 class="colorlib-heading animate-box">Favourite Quotes</h2>
+            </div>
+        </div>
+        <div class="row">
+            {% for quote in site.data.quotes %}
+            <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+                <div class="quote-item" style="border-left: 4px solid #F9BF3B; padding: 16px 20px; margin-bottom: 24px; background: #fafafa; border-radius: 0 4px 4px 0;">
+                    <blockquote style="border: none; padding: 0; margin: 0; font-size: 1em;">
+                        <p style="margin-bottom: 8px; font-style: italic;">&ldquo;{{ quote.text }}&rdquo;</p>
+                        <footer style="font-size: 0.9em; color: #777;">&mdash; <cite>{{ quote.author }}</cite></footer>
+                    </blockquote>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

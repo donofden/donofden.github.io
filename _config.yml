@@ -26,6 +26,15 @@ projects:
     forks: true
     projects:
     # - repo-name
+  # Allowlist: only repos listed here will be shown in the Projects section.
+  # Leave empty (comment out all entries) to show all non-excluded repos.
+  show:
+    - donofden.github.io
+    - python-boto3-examples
+    - go-lang-cheat-sheet
+    - cachetools-python
+    - scrum-master-automation
+    - github-automation-bot
 plugins:
   - jekyll-octicons
   - jekyll-github-metadata
