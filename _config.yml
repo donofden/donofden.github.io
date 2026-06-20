@@ -36,6 +36,6 @@ projects:
     - scrum-master-automation
     - github-automation-bot
 plugins:
-  - jekyll-octicons
   - jekyll-github-metadata
   - jemoji
+  - jekyll-sitemap

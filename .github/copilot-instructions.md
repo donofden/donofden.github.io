@@ -56,15 +56,36 @@ Personal portfolio website for **Aravind Kumar G** (`donofden`). Built with Jeky
 
 ### Local development
 
+**Prerequisites (one-time machine setup):**
+- Ruby 3.3.11 via rbenv (installed to `~/.rbenv` via git clone — no Homebrew)
+- rbenv must be active: `eval "$(~/.rbenv/bin/rbenv init -)"` — add this to `~/.zshrc`
+- `_config_dev.yml` in repo root (gitignored) to skip live GitHub API calls:
+  ```yaml
+  repository: donofden/donofden.github.io
+  ```
+
+**Every day / next time:**
 ```bash
-make install    # First-time: install gems into vendor/bundle
-make start      # Serve with live-reload at http://localhost:4000/
-make stop       # Kill the dev server
-make build      # Production build into _site/
-make clean      # Remove _site/, vendor/, .jekyll-cache/
-make update     # Update all gem dependencies
-make release VERSION=v1.2.0  # Tag and push a release
+make start      # auto-installs gems if missing, then serves at http://localhost:4000/
 ```
+
+**All targets:**
+```bash
+make start               # Serve with live-reload at http://localhost:4000/ (auto-installs gems)
+make start-drafts        # Serve including unpublished drafts
+make stop                # Kill the dev server
+make build               # Production build into _site/
+make clean               # Remove _site/, vendor/, .jekyll-cache/
+make install             # First-time gem install (start calls this automatically)
+make update              # Update all gem dependencies
+make release VERSION=v1.2.0  # Tag and push a release
+make docker-start        # Run via Docker — no local Ruby needed
+```
+
+**Troubleshooting:**
+- `make start` shows "Wrong Ruby version" → run `eval "$(~/.rbenv/bin/rbenv init -)"` then retry
+- `vendor/bundle` missing → `make start` installs it automatically
+- GitHub API rate limit warning during build → set `export JEKYLL_GITHUB_TOKEN=<pat>` in your shell (projects section shows a placeholder locally but works in production)
 
 ## Adding / Updating Content
 
